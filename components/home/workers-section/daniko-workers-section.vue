@@ -66,7 +66,7 @@ export default {
   flex-direction: column;
 
   &-header {
-    margin-bottom: 15px;
+    margin-bottom: 45px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -78,7 +78,6 @@ export default {
   }
 
   &-cards {
-    padding-top: 30px;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
