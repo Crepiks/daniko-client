@@ -1,50 +1,55 @@
 <template>
-  <section class="services">
-    <div class="services-header">
-      <h2 class="services-title">Наши услуги</h2>
-      <nuxt-link class="link" to="/services">
-        <span class="link-label">Ко всем услугам</span>
+  <section class="workers">
+    <div class="workers-header">
+      <h2 class="workers-title">Специалисты</h2>
+      <nuxt-link class="link" to="/workers">
+        <span class="link-label">Ко всем специалистам</span>
         <i class="bx bx-right-arrow-alt link-icon"></i>
       </nuxt-link>
     </div>
-    <div class="services-cards">
-      <daniko-service-card
-        v-for="service in mock"
-        :key="service.id"
+    <div class="workers-cards">
+      <daniko-worker-card
+        v-for="worker in mock"
+        :key="worker.id"
         :imagePath="mockImage"
-        :name="service.name"
+        :name="worker.name"
+        :job="worker.job"
       />
     </div>
   </section>
 </template>
 
 <script>
-import danikoServiceCard from '@/components/common/service-card/daniko-service-card'
-import testServiceImage from '@/static/images/test-service-image.jpg'
+import danikoWorkerCard from '@/components/common/worker-card/daniko-worker-card'
+import testWorkerCard from '@/static/images/test-worker-image.png'
 
 export default {
   components: {
-    'daniko-service-card': danikoServiceCard,
+    'daniko-worker-card': danikoWorkerCard,
   },
   data() {
     return {
-      mockImage: testServiceImage,
+      mockImage: testWorkerCard,
       mock: [
         {
           id: 1,
-          name: 'Обследование',
+          name: 'Кажимухан Азат',
+          job: 'Хирург',
         },
         {
           id: 2,
-          name: 'Рентген',
+          name: 'Кажимухан Азат',
+          job: 'Хирург',
         },
         {
           id: 3,
-          name: 'Покрытие гипсом',
+          name: 'Кажимухан Азат',
+          job: 'Хирург',
         },
         {
           id: 4,
-          name: 'ЭКГ обследование',
+          name: 'Кажимухан Азат',
+          job: 'Хирург',
         },
       ],
     }
@@ -53,7 +58,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.services {
+.workers {
   margin: auto;
   padding: 50px 0;
   width: 100%;
