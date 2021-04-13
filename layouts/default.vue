@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import danikoHeader from '@/components/common/daniko-header'
-import danikoFooter from '@/components/common/daniko-footer'
+import danikoHeader from '@/components/common/header/daniko-header'
+import danikoFooter from '@/components/common/footer/daniko-footer'
 
 export default {
   components: {

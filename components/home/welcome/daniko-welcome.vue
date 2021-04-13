@@ -3,7 +3,7 @@
     <div class="welcome-content">
       <div class="welcome-text">
         <h1 class="welcome-title">
-          Профессинальное лечение от лучших
+          Профессиональное лечение от лучших
           <span class="welcome-title welcome-important">специалистов</span>
         </h1>
         <p class="welcome-paragraph">
@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import danikoButton from '@/components/common/daniko-button'
+import danikoButton from '@/components/common/button/daniko-button'
 
 export default {
   components: {
@@ -33,7 +33,6 @@ export default {
 
 <style lang="scss" scoped>
 .welcome {
-  padding-top: 7%;
   width: 100%;
   height: calc(100vh - 100px);
 

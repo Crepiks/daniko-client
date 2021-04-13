@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import danikoLogo from '@/components/common/daniko-logo.vue'
+import danikoLogo from '@/components/common/logo/daniko-logo.vue'
 
 export default {
   components: {
@@ -24,6 +24,7 @@ export default {
 
 <style lang="scss">
 .header {
+  padding-bottom: 100px;
   width: 100%;
   height: 100px;
   display: flex;

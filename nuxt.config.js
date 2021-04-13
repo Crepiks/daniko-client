@@ -10,7 +10,12 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
     ],
-    link: [],
+    link: [
+      {
+        href: 'https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css',
+        rel: 'stylesheet',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

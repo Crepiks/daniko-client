@@ -53,9 +53,9 @@ export default {
 
 <style lang="scss" scoped>
 .footer {
+  padding-top: 100px;
   width: 100%;
   height: 150px;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
 
