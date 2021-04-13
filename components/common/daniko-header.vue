@@ -1,15 +1,15 @@
 <template>
-  <div class="header">
+  <header class="header">
     <div class="header-logo">
       <daniko-logo />
     </div>
-    <div class="links">
-      <nuxt-link class="link" to="">Услуги</nuxt-link>
-      <nuxt-link class="link" to="">Специалисты</nuxt-link>
-      <nuxt-link class="link" to="">Фотогалерея</nuxt-link>
-      <nuxt-link class="link" to="">Контакты</nuxt-link>
+    <div class="header-links">
+      <nuxt-link class="header-link" to="">Услуги</nuxt-link>
+      <nuxt-link class="header-link" to="">Специалисты</nuxt-link>
+      <nuxt-link class="header-link" to="">Фотогалерея</nuxt-link>
+      <nuxt-link class="header-link" to="">Контакты</nuxt-link>
     </div>
-  </div>
+  </header>
 </template>
 
 <script>
@@ -35,24 +35,24 @@ export default {
     height: 50%;
     cursor: pointer;
   }
-}
 
-.links {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
+  &-links {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
 
-.link {
-  color: $main-dark;
-  font-size: 16px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 200ms ease-in-out;
+  &-link {
+    color: $main-dark;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 200ms ease-in-out;
 
-  &:hover {
-    opacity: 0.7;
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 </style>

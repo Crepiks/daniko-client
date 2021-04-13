@@ -2,15 +2,18 @@
   <div class="page">
     <daniko-header />
     <nuxt />
+    <daniko-footer />
   </div>
 </template>
 
 <script>
-import danikoHeader from '../components/common/daniko-header.vue'
+import danikoHeader from '@/components/common/daniko-header'
+import danikoFooter from '@/components/common/daniko-footer'
 
 export default {
   components: {
     'daniko-header': danikoHeader,
+    'daniko-footer': danikoFooter,
   },
 }
 </script>
