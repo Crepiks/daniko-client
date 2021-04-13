@@ -28,10 +28,10 @@
         </a>
       </div>
       <div class="footer-links">
-        <nuxt-link class="footer-link" to="">Услуги</nuxt-link>
-        <nuxt-link class="footer-link" to="">Специалисты</nuxt-link>
-        <nuxt-link class="footer-link" to="">Фотогалерея</nuxt-link>
-        <nuxt-link class="footer-link" to="">Контакты</nuxt-link>
+        <nuxt-link class="footer-link" to="/services">Услуги</nuxt-link>
+        <nuxt-link class="footer-link" to="/workers">Специалисты</nuxt-link>
+        <nuxt-link class="footer-link" to="/galery">Фотогалерея</nuxt-link>
+        <nuxt-link class="footer-link" to="/contacts">Контакты</nuxt-link>
       </div>
     </div>
     <div class="footer-copyright">
@@ -53,7 +53,7 @@ export default {
 
 <style lang="scss" scoped>
 .footer {
-  padding-top: 100px;
+  padding-top: 150px;
   width: 100%;
   height: 150px;
   display: flex;

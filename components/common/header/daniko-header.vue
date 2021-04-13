@@ -4,10 +4,10 @@
       <daniko-logo />
     </div>
     <div class="header-links">
-      <nuxt-link class="header-link" to="">Услуги</nuxt-link>
-      <nuxt-link class="header-link" to="">Специалисты</nuxt-link>
-      <nuxt-link class="header-link" to="">Фотогалерея</nuxt-link>
-      <nuxt-link class="header-link" to="">Контакты</nuxt-link>
+      <nuxt-link class="header-link" to="/services">Услуги</nuxt-link>
+      <nuxt-link class="header-link" to="/workers">Специалисты</nuxt-link>
+      <nuxt-link class="header-link" to="/gallery">Фотогалерея</nuxt-link>
+      <nuxt-link class="header-link" to="/contacts">Контакты</nuxt-link>
     </div>
   </header>
 </template>
@@ -24,7 +24,6 @@ export default {
 
 <style lang="scss">
 .header {
-  padding-bottom: 100px;
   width: 100%;
   height: 100px;
   display: flex;

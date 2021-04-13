@@ -60,20 +60,21 @@ export default {
   }
 
   &-title {
+    margin-bottom: 3px;
     color: $main-dark;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
   }
 
   &-subtitle {
     color: $main-dark;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 400;
   }
 
   &-link {
     position: absolute;
-    bottom: 15%;
+    bottom: 17%;
     right: 5%;
   }
 }

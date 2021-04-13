@@ -33,6 +33,7 @@ export default {
 
 <style lang="scss" scoped>
 .welcome {
+  padding-top: 100px;
   width: 100%;
   height: calc(100vh - 100px);
 
