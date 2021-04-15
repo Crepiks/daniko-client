@@ -6,6 +6,7 @@
       <daniko-short-card title="Экспертиза Covid-19" />
       <daniko-short-card title="Вправливание руки" />
       <daniko-short-card title="Вправливание руки" />
+      <daniko-short-card title="Полное обследование" />
     </div>
   </div>
 </template>
@@ -34,9 +35,11 @@ export default {
   }
 
   &-services {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 80px;
+    column-gap: 20px;
+    row-gap: 20px;
   }
 }
 </style>

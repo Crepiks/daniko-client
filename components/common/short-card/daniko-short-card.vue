@@ -28,7 +28,7 @@ export default {
   position: relative;
   padding: 15px 20px;
   margin-bottom: 20px;
-  width: 250px;
+  width: 100%;
   min-height: 80px;
   box-sizing: border-box;
   border-radius: 10px;
