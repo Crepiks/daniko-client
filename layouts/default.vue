@@ -1,7 +1,9 @@
 <template>
   <div class="page">
-    <daniko-header />
-    <nuxt />
+    <div class="page-container">
+      <daniko-header />
+      <nuxt />
+    </div>
     <daniko-footer />
   </div>
 </template>
@@ -24,5 +26,14 @@ export default {
   margin: auto;
   max-width: 1140px;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>

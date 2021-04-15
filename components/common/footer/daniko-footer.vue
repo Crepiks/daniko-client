@@ -53,7 +53,7 @@ export default {
 
 <style lang="scss" scoped>
 .footer {
-  padding-top: 150px;
+  padding-top: 50px;
   width: 100%;
   height: 150px;
   display: flex;

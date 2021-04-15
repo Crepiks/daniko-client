@@ -75,6 +75,10 @@ export default {
 
 <style lang="scss" scoped>
 .services {
+  &-page {
+    padding-bottom: 100px;
+  }
+  
   &-title {
     padding: 50px 0;
     font-size: 40px;
