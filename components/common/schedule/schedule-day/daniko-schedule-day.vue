@@ -1,7 +1,7 @@
 <template>
   <div class="day" :class="{ 'day-weekend': !appointment }">
     <h4 class="day-title">{{ day }}</h4>
-    <span v-if="appointment" class="day-appointment">
+    <span v-if="appointment.length > 0" class="day-appointment">
       Прием:<br />
       с {{ appointment[0] }} до {{ appointment[1] }}
     </span>

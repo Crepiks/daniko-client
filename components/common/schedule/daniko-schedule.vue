@@ -3,27 +3,11 @@
     <h2 class="schedule-title">График работы</h2>
     <div class="schedule-days">
       <daniko-schedule-day
-        day="Понедельник"
-        :appointment="['14:00', '17:00']"
+        v-for="(day, index) in days"
+        :key="index"
+        :day="dayLiterals[day]"
+        :appointment="schedule[day] ? schedule[day].split(':') : []"
       />
-      <daniko-schedule-day
-        day="Вторник"
-        :appointment="['14:00', '17:00']"
-      />
-      <daniko-schedule-day
-        day="Среда"
-        :appointment="['14:00', '17:00']"
-      />
-      <daniko-schedule-day
-        day="Четверг"
-        :appointment="['14:00', '17:00']"
-      />
-      <daniko-schedule-day
-        day="Пятница"
-        :appointment="['14:00', '17:00']"
-      />
-      <daniko-schedule-day day="Суббота" />
-      <daniko-schedule-day day="Воскресенье" />
     </div>
   </div>
 </template>
@@ -32,8 +16,38 @@
 import danikoScheduleDay from '@/components/common/schedule/schedule-day/daniko-schedule-day.vue'
 
 export default {
+  props: {
+    schedule: {
+      type: Object,
+      required: true,
+    },
+  },
+
   components: {
     'daniko-schedule-day': danikoScheduleDay,
+  },
+
+  data() {
+    return {
+      days: [
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday',
+      ],
+      dayLiterals: {
+        monday: 'Понедельник',
+        tuesday: 'Вторник',
+        wednesday: 'Среда',
+        thursday: 'Четверг',
+        friday: 'Пятница',
+        saturday: 'Суббота',
+        sunday: 'Воскресенье',
+      },
+    }
   },
 }
 </script>

@@ -9,7 +9,7 @@
       />
     </div>
     <div class="worker-extra">
-      <daniko-schedule class="worker-schedule" />
+      <daniko-schedule class="worker-schedule" :schedule="schedule" />
       <daniko-worker-provided-services />
     </div>
   </div>
@@ -37,6 +37,15 @@ export default {
         description:
           'Более 10 лет стажа, магистратура за границей и сотни успешных операций. Буду рад вас дечить!',
       },
+      schedule: {
+        monday: '14.00:17.00',
+        tuesday: '14.00:17.00',
+        wednesday: '14.00:17.00',
+        thursday: '14.00:17.00',
+        friday: '14.00:17.00',
+        saturday: '',
+        sunday: '',
+      },
     }
   },
 }
@@ -62,7 +71,7 @@ export default {
   }
 
   &-schedule {
-      margin-bottom: 50px;
+    margin-bottom: 50px;
   }
 }
 </style>
