@@ -9,7 +9,8 @@
       />
     </div>
     <div class="worker-extra">
-      <daniko-schedule />
+      <daniko-schedule class="worker-schedule" />
+      <daniko-worker-provided-services />
     </div>
   </div>
 </template>
@@ -18,11 +19,13 @@
 import danikoWorkerMainInfo from '@/components/worker/worker-main-info/daniko-worker-main-info.vue'
 import testWorkerImage from '@/static/images/test-worker-image.png'
 import danikoSchedule from '@/components/common/schedule/daniko-schedule.vue'
+import danikoWorkerProvidedServices from '@/components/worker/worker-provided-services/daniko-worker-provided-services.vue'
 
 export default {
   components: {
     'daniko-worker-main-info': danikoWorkerMainInfo,
     'daniko-schedule': danikoSchedule,
+    'daniko-worker-provided-services': danikoWorkerProvidedServices,
   },
 
   data() {
@@ -42,7 +45,7 @@ export default {
 <style lang="scss" scoped>
 .worker {
   &-page {
-    padding: 30px 0;
+    padding: 30px 0 0 0;
     display: flex;
   }
 
@@ -56,6 +59,10 @@ export default {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+  }
+
+  &-schedule {
+      margin-bottom: 50px;
   }
 }
 </style>
