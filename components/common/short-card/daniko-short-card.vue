@@ -43,7 +43,7 @@ export default {
 
   &-subtitle {
     color: $main-dark;
-    margin-top: 5px;
+    margin: 5px 0 50px 0;
     font-size: 12px;
   }
 

@@ -5,7 +5,6 @@
       :style="{ backgroundImage: `url(${imagePath})` }"
     ></div>
     <h1 class="main-info-title">{{ name }}</h1>
-    <h3 class="main-info-subtitle">{{ job }}</h3>
     <p class="main-info-description">{{ description }}</p>
   </div>
 </template>
@@ -17,10 +16,6 @@ export default {
       type: String,
     },
     name: {
-      type: String,
-      required: true,
-    },
-    job: {
       type: String,
       required: true,
     },
@@ -49,13 +44,8 @@ export default {
   }
 
   &-title {
-    margin: 0 0 5px 0;
-    font-size: 25px;
-  }
-
-  &-subtitle {
     margin: 0 0 10px 0;
-    font-size: 16px;
+    font-size: 25px;
   }
 
   &-description {
