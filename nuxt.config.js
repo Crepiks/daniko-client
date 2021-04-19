@@ -25,6 +25,7 @@ export default {
   plugins: [
     { src: '~/plugins/swiper.js', mode: 'client' },
     { src: '~/plugins/yandexMap.js', mode: 'client' },
+    { src: '~/plugins/vueAwesomeSlider.js', mode: 'cliend' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

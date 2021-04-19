@@ -1,23 +1,56 @@
 <template>
   <section class="reviews">
     <h2 class="reviews-title">Отзывы наших клиентов</h2>
-    <div class="swiper">
-      <i class="swiper-button bx bx-chevron-left"></i>
-      <div class="slide">
-        <p class="slide-text">
-          Заболел коронавирусом и Данико меня вылечил. Снова могу есть, пить и
-          писать комментарии в интернете, спасибо медицинскому центру Данико за
-          помощь и лечение!
-        </p>
-        <span class="slide-author">Меркулов Сергей</span>
-      </div>
-      <i class="swiper-button bx bx-chevron-right"></i>
+    <div class="swiper-container">
+      <i class="swiper-button bx bx-chevron-left" slot="button-prev"></i>
+      <swiper ref="reviewsSwiper" class="swiper" :swiperOptions="swiperOption">
+        <swiper-slide class="slide">
+          <p class="slide-text">
+            Заболел коронавирусом и Данико меня вылечил. Снова могу есть, пить и
+            писать комментарии в интернете, спасибо медицинскому центру Данико
+            за помощь и лечение!
+          </p>
+          <span class="slide-author">Меркулов Сергей</span>
+        </swiper-slide>
+        <swiper-slide class="slide">
+          <p class="slide-text">
+            Вылечил детей в Данико, быстро и качественно. Спасибо за лечение!
+          </p>
+          <span class="slide-author">Арыстанов Айбек</span>
+        </swiper-slide>
+        <swiper-slide class="slide">
+          <p class="slide-text">
+            Рада, что нашла Данико. Прошла полное обследование и узнала о
+            серьезной болезни, которую сразу там же и вылечила.
+          </p>
+          <span class="slide-author">Айтханова Айлара</span>
+        </swiper-slide>
+      </swiper>
+      <i class="swiper-button bx bx-chevron-right" slot="button-next"></i>
     </div>
   </section>
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'swiper-example-navigation',
+  title: 'Navigation',
+  data() {
+    return {
+      swiperOption: {
+        navigation: {
+          nextEl: '.bx-chevron-right',
+          prevEl: '.bx-chevron-left',
+        },
+      },
+    }
+  },
+  computed: {
+    swiper() {
+      return this.$refs.reviewsSwiper.$swiper
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -37,10 +70,14 @@ export default {}
 }
 
 .swiper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  width: 100% !important;
+  &-container {
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 
   &-button {
     color: $main-dark;
@@ -55,11 +92,11 @@ export default {}
 }
 
 .slide {
-  padding: 0 45px;
-  width: 500px;
+  width: 100% !important;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 
   &-text {
     margin-bottom: 20px;
