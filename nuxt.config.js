@@ -22,11 +22,7 @@ export default {
   css: ['~/assets/styles/global.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    { src: '~/plugins/swiper.js', mode: 'client' },
-    { src: '~/plugins/yandexMap.js', mode: 'client' },
-    { src: '~/plugins/vueAwesomeSlider.js', mode: 'cliend' },
-  ],
+  plugins: [{ src: '~/plugins/yandexMap.js', mode: 'client' }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
