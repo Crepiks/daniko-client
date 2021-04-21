@@ -7,10 +7,10 @@
     <div class="card-text">
       <h3 class="card-title">{{ name }}</h3>
       <span class="card-subtitle">{{ job }}</span>
-      <div class="card-link link">
+      <nuxt-link :to="`/workers/${id}`" class="card-link link">
         <span class="link-label">Подробнее</span>
         <i class="link-icon bx bx-right-arrow-alt"></i>
-      </div>
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -28,6 +28,10 @@ export default {
     },
     job: {
       type: String,
+      required: true,
+    },
+    id: {
+      type: Number,
       required: true,
     },
   },
@@ -83,6 +87,7 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
+  text-decoration: none;
   cursor: pointer;
   transition: 200ms ease-in-out;
 

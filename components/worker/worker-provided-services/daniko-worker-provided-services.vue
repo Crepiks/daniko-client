@@ -1,12 +1,13 @@
 <template>
-  <div class="provided-services">
+  <div class="provided-services" v-if="providedServices">
     <h1 class="provided-services-title">Услуги врача</h1>
     <div class="provided-services-services">
-      <daniko-short-card title="Рентген" />
-      <daniko-short-card title="Экспертиза Covid-19" />
-      <daniko-short-card title="Вправливание руки" />
-      <daniko-short-card title="Вправливание руки" />
-      <daniko-short-card title="Полное обследование" />
+      <daniko-short-card
+        v-for="service in providedServices"
+        :key="service.id"
+        :title="service.name"
+        :id="service.id"
+      />
     </div>
   </div>
 </template>
@@ -15,6 +16,14 @@
 import danikoShortCard from '@/components/common/short-card/daniko-short-card.vue'
 
 export default {
+  props: {
+    providedServices: {
+      type: Array,
+      required: false,
+      default: [],
+    },
+  },
+
   components: {
     'daniko-short-card': danikoShortCard,
   },

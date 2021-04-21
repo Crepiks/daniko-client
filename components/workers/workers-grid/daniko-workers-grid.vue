@@ -6,6 +6,7 @@
       :imagePath="worker.imagePath"
       :name="worker.name"
       :job="worker.job"
+      :id="worker.id"
     />
   </div>
 </template>

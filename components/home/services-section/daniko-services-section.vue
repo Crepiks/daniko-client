@@ -9,10 +9,11 @@
     </div>
     <div class="services-cards">
       <daniko-service-card
-        v-for="service in mock"
+        v-for="service in servicesRow"
         :key="service.id"
-        :imagePath="mockImage"
+        :imagePath="service.imagePath"
         :name="service.name"
+        :id="service.id"
       />
     </div>
   </section>
@@ -20,7 +21,7 @@
 
 <script>
 import danikoServiceCard from '@/components/common/service-card/daniko-service-card'
-import testServiceImage from '@/static/images/test-service-image.jpg'
+import services from '@/data/services.js'
 
 export default {
   components: {
@@ -28,26 +29,14 @@ export default {
   },
   data() {
     return {
-      mockImage: testServiceImage,
-      mock: [
-        {
-          id: 1,
-          name: 'Обследование',
-        },
-        {
-          id: 2,
-          name: 'Рентген',
-        },
-        {
-          id: 3,
-          name: 'Покрытие гипсом',
-        },
-        {
-          id: 4,
-          name: 'ЭКГ обследование',
-        },
-      ],
+      services: services,
     }
+  },
+
+  computed: {
+    servicesRow() {
+      return this.services.slice(0, 4)
+    },
   },
 }
 </script>

@@ -9,11 +9,12 @@
     </div>
     <div class="workers-cards">
       <daniko-worker-card
-        v-for="worker in mock"
+        v-for="worker in workersRow"
         :key="worker.id"
-        :imagePath="mockImage"
+        :imagePath="worker.imagePath"
         :name="worker.name"
         :job="worker.job"
+        :id="worker.id"
       />
     </div>
   </section>
@@ -21,7 +22,7 @@
 
 <script>
 import danikoWorkerCard from '@/components/common/worker-card/daniko-worker-card'
-import testWorkerCard from '@/static/images/test-worker-image.png'
+import workers from '@/data/workers.js'
 
 export default {
   components: {
@@ -29,30 +30,14 @@ export default {
   },
   data() {
     return {
-      mockImage: testWorkerCard,
-      mock: [
-        {
-          id: 1,
-          name: 'Кажимухан Азат',
-          job: 'Хирург',
-        },
-        {
-          id: 2,
-          name: 'Кажимухан Азат',
-          job: 'Хирург',
-        },
-        {
-          id: 3,
-          name: 'Кажимухан Азат',
-          job: 'Хирург',
-        },
-        {
-          id: 4,
-          name: 'Кажимухан Азат',
-          job: 'Хирург',
-        },
-      ],
+      workers: workers,
     }
+  },
+
+  computed: {
+    workersRow() {
+      return this.workers.slice(0, 4)
+    },
   },
 }
 </script>

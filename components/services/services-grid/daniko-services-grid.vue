@@ -5,6 +5,7 @@
       :key="service.id"
       :imagePath="service.imagePath"
       :name="service.name"
+      :id="service.id"
     />
   </div>
 </template>

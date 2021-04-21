@@ -2,10 +2,13 @@
   <div class="short-card">
     <h3 class="short-card-title">{{ title }}</h3>
     <span v-if="job" class="short-card-subtitle">{{ job }}</span>
-    <div class="short-card-link link">
+    <nuxt-link
+      :to="job ? `/workers/${id}` : `/services/${id}`"
+      class="short-card-link link"
+    >
       <span class="link-label">Подробнее</span>
       <i class="link-icon bx bx-right-arrow-alt"></i>
-    </div>
+    </nuxt-link>
   </div>
 </template>
 
@@ -18,6 +21,10 @@ export default {
     },
     job: {
       type: String,
+    },
+    id: {
+      type: Number,
+      required: true,
     },
   },
 }
@@ -58,6 +65,7 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
+  text-decoration: none;
   cursor: pointer;
   transition: 200ms ease-in-out;
 

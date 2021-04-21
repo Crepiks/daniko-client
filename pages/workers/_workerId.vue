@@ -9,17 +9,19 @@
       />
     </div>
     <div class="worker-extra">
-      <daniko-schedule class="worker-schedule" :schedule="schedule" />
-      <daniko-worker-provided-services />
+      <daniko-schedule class="worker-schedule" :schedule="worker.schedule" />
+      <daniko-worker-provided-services
+        :providedServices="worker.providedServices"
+      />
     </div>
   </div>
 </template>
 
 <script>
 import danikoWorkerMainInfo from '@/components/worker/worker-main-info/daniko-worker-main-info.vue'
-import testWorkerImage from '@/static/images/test-worker-image.png'
 import danikoSchedule from '@/components/common/schedule/daniko-schedule.vue'
 import danikoWorkerProvidedServices from '@/components/worker/worker-provided-services/daniko-worker-provided-services.vue'
+import worker from '@/data/worker.js'
 
 export default {
   components: {
@@ -30,22 +32,7 @@ export default {
 
   data() {
     return {
-      worker: {
-        imagePath: testWorkerImage,
-        name: 'Кажимухан Азат',
-        job: 'Хирург',
-        description:
-          'Более 10 лет стажа, магистратура за границей и сотни успешных операций. Буду рад вас дечить!',
-      },
-      schedule: {
-        monday: '14.00:17.00',
-        tuesday: '14.00:17.00',
-        wednesday: '14.00:17.00',
-        thursday: '14.00:17.00',
-        friday: '14.00:17.00',
-        saturday: '',
-        sunday: '',
-      },
+      worker: worker,
     }
   },
 }

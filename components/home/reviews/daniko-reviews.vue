@@ -4,26 +4,11 @@
     <div class="swiper-container">
       <i class="swiper-button bx bx-chevron-left"></i>
       <div class="swiper">
-        <div class="slide">
+        <div class="slide" v-for="(review, index) in reviews" :key="index">
           <p class="slide-text">
-            Заболел коронавирусом и Данико меня вылечил. Снова могу есть, пить и
-            писать комментарии в интернете, спасибо медицинскому центру Данико
-            за помощь и лечение!
+            {{ review.review }}
           </p>
-          <span class="slide-author">Меркулов Сергей</span>
-        </div>
-        <div class="slide">
-          <p class="slide-text">
-            Вылечил детей в Данико, быстро и качественно. Спасибо за лечение!
-          </p>
-          <span class="slide-author">Арыстанов Айбек</span>
-        </div>
-        <div class="slide">
-          <p class="slide-text">
-            Рада, что нашла Данико. Прошла полное обследование и узнала о
-            серьезной болезни, которую сразу там же и вылечила.
-          </p>
-          <span class="slide-author">Айтханова Айлара</span>
+          <span class="slide-author">{{ review.author }}</span>
         </div>
       </div>
       <i class="swiper-button bx bx-chevron-right"></i>
@@ -32,7 +17,15 @@
 </template>
 
 <script>
-export default {}
+import reviews from '@/data/reviews.js'
+
+export default {
+  data() {
+    return {
+      reviews: reviews,
+    }
+  },
+}
 </script>
 
 <style lang="scss" scoped>

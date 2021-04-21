@@ -4,19 +4,19 @@
       <h1 class="contacts-title">Свяжитесь с нами</h1>
       <div class="contact">
         <span class="contact-label">Номер телефона:</span>
-        <span class="contact-data">+7 (707)-205-07-16</span>
+        <span class="contact-data">{{ contacts.phoneNumber }}</span>
       </div>
       <div class="contact">
         <span class="contact-label">Электронная почта:</span>
-        <span class="contact-data">daniko@mail.ru</span>
+        <span class="contact-data">{{ contacts.email }}</span>
       </div>
       <div class="contact">
         <span class="contact-label">Почтовый индекс:</span>
-        <span class="contact-data">080020</span>
+        <span class="contact-data">{{ contacts.mailIndex }}</span>
       </div>
       <div class="contact">
         <span class="contact-label">Адрес:</span>
-        <span class="contact-data">ул. Пушкина, дом 21</span>
+        <span class="contact-data">{{ contacts.address }}</span>
       </div>
       <div class="map">
         <yandex-map
@@ -37,12 +37,20 @@
 </template>
 
 <script>
+import mockContacts from '@/data/contacts.js'
+
 export default {
   data() {
     return {
-      mapCoords: [42.890259, 71.341873],
+      mapCoords: mockContacts.coords,
       mapZoom: 16,
-      markerCoords: [42.890259, 71.341873],
+      markerCoords: mockContacts.coords,
+      contacts: {
+        phoneNumber: mockContacts.phoneNumber,
+        email: mockContacts.email,
+        address: mockContacts.address,
+        mailIndex: mockContacts.mailIndex,
+      },
     }
   },
 }

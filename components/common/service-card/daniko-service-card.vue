@@ -6,10 +6,10 @@
     ></div>
     <div class="card-text">
       <h3 class="card-title">{{ name }}</h3>
-      <div class="card-link link">
+      <nuxt-link :to="`/services/${id}`" class="card-link link">
         <span class="link-label">Подробнее</span>
         <i class="link-icon bx bx-right-arrow-alt"></i>
-      </div>
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -23,6 +23,10 @@ export default {
     },
     name: {
       type: String,
+      required: true,
+    },
+    id: {
+      type: Number,
       required: true,
     },
   },
@@ -71,6 +75,7 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
+  text-decoration: none;
   cursor: pointer;
   transition: 200ms ease-in-out;
 
