@@ -7,6 +7,7 @@
         :key="index"
         :day="dayLiterals[day]"
         :appointment="schedule[day] ? schedule[day].split(':') : []"
+        :type="type"
       />
     </div>
   </div>
@@ -47,6 +48,15 @@ export default {
         saturday: 'Суббота',
         sunday: 'Воскресенье',
       },
+      type: '',
+    }
+  },
+
+  mounted() {
+    if (this.$route.path.includes('workers')) {
+      this.type = 'worker'
+    } else if (this.$route.path.includes('services')) {
+      this.type = 'service'
     }
   },
 }

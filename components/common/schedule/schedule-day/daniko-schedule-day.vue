@@ -5,10 +5,13 @@
       Прием:<br />
       с {{ appointment[0] }} до {{ appointment[1] }}
     </span>
-    <span v-else class="day-appointment"
-      >Врач не<br />
-      принимает</span
-    >
+    <span v-else class="day-appointment">{{
+      type == 'worker'
+        ? 'Врач не принимает'
+        : type == 'service'
+        ? 'Услуга не\n предоставляется'
+        : 'Не рабочий день'
+    }}</span>
   </div>
 </template>
 
@@ -21,6 +24,10 @@ export default {
     },
     appointment: {
       type: Array,
+    },
+    type: {
+      type: String,
+      required: true,
     },
   },
 }
@@ -51,6 +58,7 @@ export default {
   &-appointment {
     color: $main-dark;
     font-size: 12px;
+    text-align: center;
     opacity: 0.8;
   }
 }
