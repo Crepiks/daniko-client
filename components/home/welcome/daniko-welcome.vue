@@ -70,4 +70,35 @@ export default {
     opacity: 0.6;
   }
 }
+
+@media (max-width: 1024px) {
+  .welcome {
+    &-content {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-image {
+      margin-bottom: 50px;
+    }
+
+    &-text {
+      margin: 0;
+      width: 80%;
+      text-align: center;
+    }
+
+    &-title {
+      margin-bottom: 30px;
+      font-size: 45px;
+    }
+
+    &-paragraph {
+      margin-bottom: 60px;
+      font-size: 28px;
+      line-height: 130%;
+    }
+  }
+}
 </style>
