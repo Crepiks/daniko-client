@@ -106,4 +106,10 @@ export default {
     font-size: 20px;
   }
 }
+
+@media(max-width: 1024px) {
+  .card {
+    height: 300px;
+  }
+}
 </style>

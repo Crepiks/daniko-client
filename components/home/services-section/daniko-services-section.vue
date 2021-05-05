@@ -93,4 +93,22 @@ export default {
     font-size: 20px;
   }
 }
+
+@media (max-width: 1024px) {
+  .services {
+    &-title {
+      font-size: 30px;
+    }
+  }
+
+  .link {
+    &-label {
+      font-size: 20px;
+    }
+
+    &-icon {
+      font-size: 26px;
+    }
+  }
+}
 </style>
