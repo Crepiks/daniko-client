@@ -22,7 +22,7 @@ export default {
 
 <style lang="scss">
 .page {
-  padding: 0 2%;
+  padding: 0 5%;
   margin: auto;
   max-width: 1140px;
   min-height: 100vh;
@@ -34,6 +34,12 @@ export default {
     width: 100%;
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media(max-width: 1024px) {
+  .page {
+    padding: 0 80px;
   }
 }
 </style>

@@ -28,7 +28,7 @@ export default {}
   }
 
   &-title {
-    color: $main-dark;
+    color: $primary;
     font-size: 30px;
   }
 }
