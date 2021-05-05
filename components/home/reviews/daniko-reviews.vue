@@ -160,6 +160,37 @@ export default {
     font-weight: 700;
   }
 }
+
+@media(max-width: 1024px) {
+  .reviews {
+    &-title {
+      font-size: 30px;
+    }
+  }
+
+  .swiper {
+    &-container {
+      width: 700px;
+    }
+
+    &-button {
+      font-size: 45px;
+    }
+  }
+
+  .slide {
+    min-height: 180px;
+
+    &-text {
+      padding: 0 30px;
+      font-size: 24px;
+    }
+
+    &-author {
+      font-size: 22px;
+    }
+  }
+}
 </style>
 
 <style lang="scss">
