@@ -136,4 +136,26 @@ export default {
     font-weight: 500;
   }
 }
+
+@media (max-width: 1024px) {
+  .footer {
+    &-links {
+      gap: 0;
+    }
+
+    &-link {
+      margin-left: 25px;
+      font-size: 20px;
+    }
+  }
+
+  .social {
+    &-icon {
+      &-container {
+        width: 45px;
+        height: 45px;
+      }
+    }
+  }
+}
 </style>
