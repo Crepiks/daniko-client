@@ -64,7 +64,7 @@ export default {
   justify-content: space-between;
 
   &-logo {
-    height: 50%;
+    height: 40px;
     cursor: pointer;
   }
 
@@ -98,12 +98,6 @@ export default {
 
 @media (max-width: 1024px) {
   .header {
-    height: 160px;
-
-    &-logo {
-      height: 30%;
-    }
-
     &-links {
       display: none;
     }

@@ -1,23 +1,21 @@
 <template>
   <section class="welcome">
-    <div class="welcome-content">
-      <div class="welcome-text">
-        <h1 class="welcome-title">
-          Профессиональное лечение от лучших
-          <span class="welcome-title welcome-important">специалистов</span>
-        </h1>
-        <p class="welcome-paragraph">
-          Профессиональное лечение по всем направлениям от лучших специалистов в
-          Таразе
-        </p>
-        <daniko-button to="services">К услугам</daniko-button>
-      </div>
-      <img
-        src="@/static/images/welcome-image.svg"
-        alt="Daniko"
-        class="welcome-image"
-      />
+    <div class="welcome-text">
+      <h1 class="welcome-title">
+        Профессиональное лечение от лучших
+        <span class="welcome-title welcome-important">специалистов</span>
+      </h1>
+      <p class="welcome-paragraph">
+        Профессиональное лечение по всем направлениям от лучших специалистов в
+        Таразе
+      </p>
+      <daniko-button to="services">К услугам</daniko-button>
     </div>
+    <img
+      src="@/static/images/welcome-image.svg"
+      alt="Daniko"
+      class="welcome-image"
+    />
   </section>
 </template>
 
@@ -33,72 +31,97 @@ export default {
 
 <style lang="scss" scoped>
 .welcome {
-  padding-top: 100px;
-  width: 100%;
   height: calc(100vh - 100px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  &-content {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
+.welcome-text {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-  &-text {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+.welcome-title {
+  margin-bottom: 15px;
+  color: $main-dark;
+  font-size: 40px;
+  font-weight: bold;
+}
 
-  &-title {
-    margin-bottom: 15px;
-    color: $main-dark;
-    font-size: 40px;
-    font-weight: bold;
-  }
+.welcome-important {
+  color: $primary;
+}
 
-  &-important {
-    color: $primary;
-  }
-
-  &-paragraph {
-    margin-bottom: 35px;
-    color: $main-dark;
-    font-size: 22px;
-    opacity: 0.6;
-  }
+.welcome-paragraph {
+  margin-bottom: 35px;
+  color: $main-dark;
+  font-size: 22px;
+  opacity: 0.6;
 }
 
 @media (max-width: 1024px) {
   .welcome {
-    &-content {
-      flex-direction: column-reverse;
-      justify-content: center;
-      align-items: center;
-    }
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
 
-    &-image {
-      margin-bottom: 50px;
-    }
+  .welcome-text {
+    width: 70%;
+    text-align: center;
+  }
 
-    &-text {
-      margin: 0;
-      width: 80%;
-      text-align: center;
-    }
+  .welcome-image {
+    width: 50%;
+    margin-bottom: 50px;
+  }
 
-    &-title {
-      margin-bottom: 30px;
-      font-size: 45px;
-    }
+  .welcome-title {
+    margin-bottom: 10px;
+    font-size: 36px;
+  }
 
-    &-paragraph {
-      margin-bottom: 60px;
-      font-size: 28px;
-      line-height: 130%;
-    }
+  .welcome-paragraph {
+    margin-bottom: 40px;
+    font-size: 20px;
+    line-height: 130%;
+  }
+}
+
+@media (max-width: 700px) {
+  .welcome-text {
+    width: 80%;
+    text-align: center;
+  }
+
+  .welcome-image {
+    width: 70%;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  .welcome-text {
+    width: 90%;
+    text-align: center;
+  }
+
+  .welcome-image {
+    width: 80%;
+    margin-bottom: 50px;
+  }
+
+  .welcome-title {
+    font-size: 30px;
+  }
+
+  .welcome-paragraph {
+    font-size: 16px;
   }
 }
 </style>

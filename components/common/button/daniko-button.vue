@@ -31,11 +31,4 @@ export default {
     opacity: 0.7;
   }
 }
-
-@media(max-width: 1024px) {
-  .button {
-    padding: 15px 30px;
-    font-size: 24px;
-  }
-}
 </style>

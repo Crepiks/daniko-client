@@ -22,24 +22,31 @@ export default {
 
 <style lang="scss">
 .page {
-  padding: 0 5%;
   margin: auto;
-  max-width: 1140px;
+  max-width: 1000px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
 
-  &-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+.page-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1024px) {
+  .page {
+    max-width: auto;
+    padding: 0 20px;
   }
 }
 
-@media(max-width: 1024px) {
+@media (max-width: 400px) {
   .page {
-    padding: 0 80px;
+    max-width: auto;
+    padding: 0 10px;
   }
 }
 </style>

@@ -1,27 +1,24 @@
 <template>
   <div class="home-page">
     <daniko-welcome />
-    <daniko-services-section />
-    <daniko-workers-section />
+    <daniko-services />
+    <daniko-workers />
     <daniko-reviews />
   </div>
 </template>
 
 <script>
-import danikoWelcome from '@/components/home/welcome/daniko-welcome'
-import danikoServicesSection from '@/components/home/services-section/daniko-services-section'
-import danikoWorkersSection from '@/components/home/workers-section/daniko-workers-section'
-import danikoReviews from '@/components/home/reviews/daniko-reviews'
+import DanikoWelcome from '@/components/home/welcome/daniko-welcome'
+import DanikoServices from '@/components/home/services/daniko-services'
+import DanikoWorkers from '@/components/home/workers/daniko-workers'
+import DanikoReviews from '@/components/home/reviews/daniko-reviews'
 
 export default {
   components: {
-    'daniko-welcome': danikoWelcome,
-    'daniko-services-section': danikoServicesSection,
-    'daniko-workers-section': danikoWorkersSection,
-    'daniko-reviews': danikoReviews,
+    'daniko-welcome': DanikoWelcome,
+    'daniko-services': DanikoServices,
+    'daniko-workers': DanikoWorkers,
+    'daniko-reviews': DanikoReviews,
   },
 }
 </script>
-
-<style lang="scss" scoped>
-</style>

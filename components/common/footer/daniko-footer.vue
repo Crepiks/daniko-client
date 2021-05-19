@@ -58,104 +58,103 @@ export default {
   height: 150px;
   display: flex;
   flex-direction: column;
+}
 
-  &-main {
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+.footer-main {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
-  &-socials {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 30px;
-  }
+.footer-socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 30px;
+}
 
-  &-links {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    gap: 40px;
-  }
+.footer-links {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
 
-  &-link {
-    color: $main-dark;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: 200ms ease-in-out;
+.footer-link {
+  color: $main-dark;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 200ms ease-in-out;
+}
 
-    &:hover {
-      opacity: 0.7;
-    }
-  }
+.footer-link:hover {
+  opacity: 0.7;
+}
 
-  &-copyright {
-    color: $main-dark;
-    font-size: 14px;
-    font-weight: 600;
-    opacity: 0.6;
-  }
+.footer-copyright {
+  color: $main-dark;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.6;
 }
 
 .social {
   display: flex;
   align-items: center;
   transition: 200ms ease-in-out;
+}
 
-  &:hover {
-    opacity: 0.7;
-  }
+.social:hover {
+  opacity: 0.7;
+}
 
-  &-link {
-    text-decoration: none;
-  }
+.social-link {
+  text-decoration: none;
+}
 
-  &-icon {
-    height: 60%;
-    width: 60%;
-    background: transparent;
+.social-icon {
+  height: 60%;
+  width: 60%;
+  background: transparent;
+}
 
-    &-container {
-      margin-right: 10px;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-      background-color: $primary;
-    }
-  }
+.social-icon-container {
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: $primary;
+}
 
-  &-label {
-    color: $main-dark;
-    font-size: 18px;
-    font-weight: 500;
-  }
+.social-label {
+  color: $main-dark;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 @media (max-width: 1024px) {
-  .footer {
-    &-links {
-      gap: 0;
-    }
-
-    &-link {
-      margin-left: 25px;
-      font-size: 20px;
-    }
+  .footer-links {
+    gap: 0;
   }
 
-  .social {
-    &-icon {
-      &-container {
-        width: 45px;
-        height: 45px;
-      }
-    }
+  .footer-link {
+    margin-left: 25px;
+  }
+
+  .social-icon-container {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer-links {
+    display: none;
   }
 }
 </style>
