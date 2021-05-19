@@ -14,7 +14,7 @@ export default {
     saturday: '',
     sunday: '',
   },
-  providedWorkers: [
+  workers: [
     {
       id: 1,
       name: 'Кажимухан Азат',

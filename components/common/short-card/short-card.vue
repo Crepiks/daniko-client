@@ -33,10 +33,9 @@ export default {
 <style lang="scss" scoped>
 .short-card {
   position: relative;
-  padding: 15px 20px;
-  margin-bottom: 20px;
   width: 100%;
   min-height: 80px;
+  padding: 15px 20px;
   box-sizing: border-box;
   border-radius: 10px;
   background-color: $white;

@@ -1,32 +1,30 @@
 <template>
   <div class="service-page">
     <div class="service-main">
-      <daniko-service-main-info
-        :imagePath="service.imagePath"
+      <service-card
         :name="service.name"
         :description="service.description"
+        :image-path="service.imagePath"
       />
     </div>
     <div class="service-extra">
       <schedule class="service-schedule" :schedule="service.schedule" />
-      <daniko-workers-provided-service
-        :providedWorkers="service.providedWorkers"
-      />
+      <workers :workers="service.workers" />
     </div>
   </div>
 </template>
 
 <script>
-import DanikoServiceMainInfo from '@/components/service/service-main-info/daniko-service-main-info.vue'
-import Schedule from '@/components/common/schedule/schedule.vue'
-import DanikoWorkersProvidedService from '@/components/service/workers-provided-service/daniko-workers-provided-service.vue'
+import ServiceCard from '@/components/service/service-card/service-card'
+import Schedule from '@/components/common/schedule/schedule'
+import Workers from '@/components/service/workers/workers'
 import service from '@/data/service.js'
 
 export default {
   components: {
-    'daniko-service-main-info': DanikoServiceMainInfo,
+    'service-card': ServiceCard,
     schedule: Schedule,
-    'daniko-workers-provided-service': DanikoWorkersProvidedService,
+    workers: Workers,
   },
   data: () => ({
     service: service,
