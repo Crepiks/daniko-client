@@ -1,7 +1,7 @@
 <template>
   <div class="service-page">
     <div class="service-main">
-      <service-card
+      <service-info
         :name="service.name"
         :description="service.description"
         :image-path="service.imagePath"
@@ -15,14 +15,14 @@
 </template>
 
 <script>
-import ServiceCard from '@/components/services/service-card/service-card'
+import ServiceInfo from '@/components/services/service-info/service-info'
 import Schedule from '@/components/common/schedule/schedule'
 import Workers from '@/components/services/workers/workers'
 import service from '@/data/service.js'
 
 export default {
   components: {
-    'service-card': ServiceCard,
+    'service-info': ServiceInfo,
     schedule: Schedule,
     workers: Workers,
   },

@@ -1,6 +1,6 @@
 <template>
   <div class="grid">
-    <daniko-service-card
+    <service-card
       v-for="service in services"
       :key="service.id"
       :imagePath="service.imagePath"
@@ -11,11 +11,11 @@
 </template>
 
 <script>
-import DanikoServiceCard from '@/components/common/service-card/daniko-service-card'
+import ServiceCard from '@/components/services/service-card/service-card'
 
 export default {
   components: {
-    'daniko-service-card': DanikoServiceCard,
+    'service-card': ServiceCard,
   },
   props: {
     services: {
@@ -30,13 +30,20 @@ export default {
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 300px;
   column-gap: 20px;
-  row-gap: 40px;
+  row-gap: 20px;
 }
 
 @media (max-width: 900px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .grid {
+    grid-auto-rows: 200px;
   }
 }
 </style>

@@ -8,10 +8,10 @@
       </nuxt-link>
     </div>
     <div class="services-cards">
-      <daniko-service-card
+      <service-card
         v-for="service in servicesRow"
         :key="service.id"
-        :imagePath="service.imagePath"
+        :image-path="service.imagePath"
         :name="service.name"
         :id="service.id"
       />
@@ -20,12 +20,12 @@
 </template>
 
 <script>
-import DanikoServiceCard from '@/components/common/service-card/daniko-service-card'
+import ServiceCard from '@/components/services/service-card/service-card'
 import services from '@/data/services.js'
 
 export default {
   components: {
-    'daniko-service-card': DanikoServiceCard,
+    'service-card': ServiceCard,
   },
   data: () => ({
     services: services,
