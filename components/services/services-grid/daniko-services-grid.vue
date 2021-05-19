@@ -11,18 +11,17 @@
 </template>
 
 <script>
-import danikoServiceCard from '@/components/common/service-card/daniko-service-card'
+import DanikoServiceCard from '@/components/common/service-card/daniko-service-card'
 
 export default {
+  components: {
+    'daniko-service-card': DanikoServiceCard,
+  },
   props: {
     services: {
       type: Array,
       required: true,
     },
-  },
-
-  components: {
-    'daniko-service-card': danikoServiceCard,
   },
 }
 </script>
@@ -33,5 +32,11 @@ export default {
   grid-template-columns: repeat(4, 1fr);
   column-gap: 20px;
   row-gap: 40px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 </style>

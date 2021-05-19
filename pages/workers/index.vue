@@ -23,14 +23,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.workers {
-  &-page {
-    padding-bottom: 100px;
-  }
+.workers-page {
+  padding-bottom: 100px;
+}
 
-  &-title {
-    padding: 50px 0;
-    font-size: 40px;
+.workers-title {
+  margin-bottom: 30px;
+  font-size: 30px;
+  color: $main-dark;
+}
+
+@media all and (max-width: 500px) {
+  .workers-title {
+    margin-bottom: 22px;
+    font-size: 24px;
   }
 }
 </style>

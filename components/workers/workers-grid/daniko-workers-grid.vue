@@ -12,18 +12,17 @@
 </template>
 
 <script>
-import danikoWorkerCard from '@/components/common/worker-card/daniko-worker-card'
+import DanikoWorkerCard from '@/components/common/worker-card/daniko-worker-card'
 
 export default {
+  components: {
+    'daniko-worker-card': DanikoWorkerCard,
+  },
   props: {
     workers: {
       type: Array,
       required: true,
     },
-  },
-
-  components: {
-    'daniko-worker-card': danikoWorkerCard,
   },
 }
 </script>
@@ -34,5 +33,11 @@ export default {
   grid-template-columns: repeat(4, 1fr);
   column-gap: 20px;
   row-gap: 40px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 </style>
