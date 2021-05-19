@@ -15,9 +15,9 @@
 </template>
 
 <script>
-import ServiceCard from '@/components/service/service-card/service-card'
+import ServiceCard from '@/components/services/service-card/service-card'
 import Schedule from '@/components/common/schedule/schedule'
-import Workers from '@/components/service/workers/workers'
+import Workers from '@/components/services/workers/workers'
 import service from '@/data/service.js'
 
 export default {
@@ -44,7 +44,7 @@ export default {
 
 .service-extra {
   width: 100%;
-  padding-left: 50px;
+  margin-left: 30px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;

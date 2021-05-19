@@ -1,17 +1,17 @@
 <template>
   <div class="services-page">
     <h1 class="services-title">Услуги</h1>
-    <daniko-services-grid :services="services" />
+    <services-grid :services="services" />
   </div>
 </template>
 
 <script>
-import DanikoServicesGrid from '@/components/services/services-grid/daniko-services-grid'
+import ServicesGrid from '@/components/services/services-grid/services-grid'
 import services from '@/data/services.js'
 
 export default {
   components: {
-    'daniko-services-grid': DanikoServicesGrid,
+    'services-grid': ServicesGrid,
   },
   data: () => ({
     services: services,
