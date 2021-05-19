@@ -9,7 +9,7 @@
       />
     </div>
     <div class="worker-extra">
-      <daniko-schedule class="worker-schedule" :schedule="worker.schedule" />
+      <schedule class="worker-schedule" :schedule="worker.schedule" />
       <daniko-worker-provided-services
         :providedServices="worker.providedServices"
       />
@@ -18,16 +18,16 @@
 </template>
 
 <script>
-import danikoWorkerMainInfo from '@/components/worker/worker-main-info/daniko-worker-main-info.vue'
-import danikoSchedule from '@/components/common/schedule/daniko-schedule.vue'
-import danikoWorkerProvidedServices from '@/components/worker/worker-provided-services/daniko-worker-provided-services.vue'
+import DanikoWorkerMainInfo from '@/components/worker/worker-main-info/daniko-worker-main-info.vue'
+import Schedule from '@/components/common/schedule/schedule.vue'
+import DanikoWorkerProvidedServices from '@/components/worker/worker-provided-services/daniko-worker-provided-services.vue'
 import worker from '@/data/worker.js'
 
 export default {
   components: {
-    'daniko-worker-main-info': danikoWorkerMainInfo,
-    'daniko-schedule': danikoSchedule,
-    'daniko-worker-provided-services': danikoWorkerProvidedServices,
+    'daniko-worker-main-info': DanikoWorkerMainInfo,
+    schedule: Schedule,
+    'daniko-worker-provided-services': DanikoWorkerProvidedServices,
   },
 
   data() {

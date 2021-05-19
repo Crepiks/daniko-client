@@ -8,7 +8,7 @@
       />
     </div>
     <div class="service-extra">
-      <daniko-schedule class="service-schedule" :schedule="service.schedule" />
+      <schedule class="service-schedule" :schedule="service.schedule" />
       <daniko-workers-provided-service
         :providedWorkers="service.providedWorkers"
       />
@@ -18,14 +18,14 @@
 
 <script>
 import DanikoServiceMainInfo from '@/components/service/service-main-info/daniko-service-main-info.vue'
-import DanikoSchedule from '@/components/common/schedule/daniko-schedule.vue'
+import Schedule from '@/components/common/schedule/schedule.vue'
 import DanikoWorkersProvidedService from '@/components/service/workers-provided-service/daniko-workers-provided-service.vue'
 import service from '@/data/service.js'
 
 export default {
   components: {
     'daniko-service-main-info': DanikoServiceMainInfo,
-    'daniko-schedule': DanikoSchedule,
+    schedule: Schedule,
     'daniko-workers-provided-service': DanikoWorkersProvidedService,
   },
   data: () => ({
