@@ -17,47 +17,42 @@
 </template>
 
 <script>
-import danikoServiceMainInfo from '@/components/service/service-main-info/daniko-service-main-info.vue'
-import danikoSchedule from '@/components/common/schedule/daniko-schedule.vue'
-import danikoWorkersProvidedService from '@/components/service/workers-provided-service/daniko-workers-provided-service.vue'
+import DanikoServiceMainInfo from '@/components/service/service-main-info/daniko-service-main-info.vue'
+import DanikoSchedule from '@/components/common/schedule/daniko-schedule.vue'
+import DanikoWorkersProvidedService from '@/components/service/workers-provided-service/daniko-workers-provided-service.vue'
 import service from '@/data/service.js'
 
 export default {
   components: {
-    'daniko-service-main-info': danikoServiceMainInfo,
-    'daniko-schedule': danikoSchedule,
-    'daniko-workers-provided-service': danikoWorkersProvidedService,
+    'daniko-service-main-info': DanikoServiceMainInfo,
+    'daniko-schedule': DanikoSchedule,
+    'daniko-workers-provided-service': DanikoWorkersProvidedService,
   },
-
-  data() {
-    return {
-      service: service,
-    }
-  },
+  data: () => ({
+    service: service,
+  }),
 }
 </script>
 
 <style lang="scss" scoped>
-.service {
-  &-page {
-    padding: 30px 0 0 0;
-    display: flex;
-  }
+.service-page {
+  padding: 30px 0 0 0;
+  display: flex;
+}
 
-  &-main {
-    width: 250px;
-  }
+.service-main {
+  width: 250px;
+}
 
-  &-extra {
-    padding-left: 50px;
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-  }
+.service-extra {
+  width: 100%;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
 
-  &-schedule {
-    margin-bottom: 50px;
-  }
+.service-schedule {
+  margin-bottom: 50px;
 }
 </style>
