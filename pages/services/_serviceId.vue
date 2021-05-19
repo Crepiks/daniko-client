@@ -27,7 +27,7 @@ export default {
     workers: Workers,
   },
   data: () => ({
-    service: service,
+    service,
   }),
 }
 </script>
@@ -39,7 +39,7 @@ export default {
 }
 
 .service-main {
-  width: 250px;
+  width: 350px;
 }
 
 .service-extra {
@@ -51,6 +51,20 @@ export default {
 }
 
 .service-schedule {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+}
+
+@media all and (max-width: 600px) {
+  .service-page {
+    display: block;
+  }
+
+  .service-main {
+    width: 100%;
+  }
+
+  .service-extra {
+    margin: 40px 0 0;
+  }
 }
 </style>
