@@ -46,7 +46,7 @@ export default {
 @media (max-width: 400px) {
   .page {
     max-width: auto;
-    padding: 0 10px;
+    padding: 0 14px;
   }
 }
 </style>

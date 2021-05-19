@@ -60,7 +60,7 @@ export default {
 .welcome-paragraph {
   margin-bottom: 35px;
   color: $main-dark;
-  font-size: 22px;
+  font-size: 18px;
   opacity: 0.6;
 }
 
