@@ -63,6 +63,7 @@ export default {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 350px;
   column-gap: 20px;
   row-gap: 20px;
 }
@@ -122,6 +123,12 @@ export default {
 
   .services-header {
     margin-bottom: 30px;
+  }
+
+  .services-cards {
+    grid-auto-rows: 200px;
+    column-gap: 10px;
+    row-gap: 10px;
   }
 }
 </style>

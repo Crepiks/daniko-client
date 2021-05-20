@@ -44,6 +44,8 @@ export default {
 @media (max-width: 500px) {
   .grid {
     grid-auto-rows: 200px;
+    column-gap: 10px;
+    row-gap: 10px;
   }
 }
 </style>

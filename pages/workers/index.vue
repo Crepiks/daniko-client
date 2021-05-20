@@ -25,7 +25,7 @@ export default {
 }
 
 .workers-title {
-  margin-bottom: 30px;
+  margin: 20px 0 30px;
   font-size: 30px;
   color: $main-dark;
 }
