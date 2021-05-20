@@ -40,58 +40,53 @@
 import mockContacts from '@/data/contacts.js'
 
 export default {
-  data() {
-    return {
-      mapCoords: mockContacts.coords,
-      mapZoom: 16,
-      markerCoords: mockContacts.coords,
-      contacts: {
-        phoneNumber: mockContacts.phoneNumber,
-        email: mockContacts.email,
-        address: mockContacts.address,
-        mailIndex: mockContacts.mailIndex,
-      },
-    }
-  },
-
+  data: () => ({
+    mapCoords: mockContacts.coords,
+    mapZoom: 16,
+    markerCoords: mockContacts.coords,
+    contacts: {
+      phoneNumber: mockContacts.phoneNumber,
+      email: mockContacts.email,
+      address: mockContacts.address,
+      mailIndex: mockContacts.mailIndex,
+    },
+  }),
   methods: {
     updateValue(value) {
-      this.$emit("input", value);
-    }
-  }
+      this.$emit('input', value)
+    },
+  },
 }
 </script>
 
 <style lang="scss" scoped>
-.contacts {
-  &-page {
-    margin: 30px 0 0 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
+.contacts-page {
+  margin: 30px 0 0 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  &-text {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+.contacts-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-  &-title {
-    margin: none;
-    margin-bottom: 20px;
-    color: $main-dark;
-    font-size: 30px;
-    font-weight: 700;
-  }
+.contacts-title {
+  margin: none;
+  margin-bottom: 20px;
+  color: $main-dark;
+  font-size: 30px;
+  font-weight: 700;
+}
 
-  &-image {
-    width: 50%;
-  }
+.contacts-image {
+  width: 50%;
 }
 
 .contact {
@@ -101,14 +96,14 @@ export default {
   align-items: center;
   color: $main-dark;
   font-size: 18px;
+}
 
-  &-label {
-    margin-right: 10px;
-  }
+.contact-label {
+  margin-right: 10px;
+}
 
-  &-data {
-    color: $primary;
-  }
+.contact-data {
+  color: $primary;
 }
 
 .map {
@@ -119,5 +114,27 @@ export default {
   background-color: #dbdbdb;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   overflow: hidden;
+}
+
+@media all and (max-width: 800px) {
+  .contacts-text {
+    width: 100%;
+  }
+
+  .contacts-title {
+    font-size: 22px;
+  }
+
+  .contacts-image {
+    display: none;
+  }
+
+  .contact {
+    font-size: 14px;
+  }
+
+  .map {
+    width: 300px;
+  }
 }
 </style>
