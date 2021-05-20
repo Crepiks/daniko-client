@@ -4,6 +4,7 @@
       <daniko-logo />
     </div>
     <div class="header-links">
+      <nuxt-link class="header-link" to="/">Главная</nuxt-link>
       <nuxt-link class="header-link" to="/services">Услуги</nuxt-link>
       <nuxt-link class="header-link" to="/workers">Специалисты</nuxt-link>
       <nuxt-link class="header-link" to="/gallery">Фотогалерея</nuxt-link>
@@ -33,19 +34,15 @@
 </template>
 
 <script>
-import danikoLogo from '@/components/common/logo/daniko-logo.vue'
+import Logo from '@/components/common/logo/logo'
 
 export default {
   components: {
-    'daniko-logo': danikoLogo,
+    'daniko-logo': Logo,
   },
-
-  data() {
-    return {
-      isMobileMenuOpen: false,
-    }
-  },
-
+  data: () => ({
+    isMobileMenuOpen: false,
+  }),
   watch: {
     $route() {
       this.isMobileMenuOpen = false

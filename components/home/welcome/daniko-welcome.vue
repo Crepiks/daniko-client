@@ -20,11 +20,11 @@
 </template>
 
 <script>
-import danikoButton from '@/components/common/button/daniko-button'
+import DanikoButton from '@/components/common/button/button'
 
 export default {
   components: {
-    'daniko-button': danikoButton,
+    'daniko-button': DanikoButton,
   },
 }
 </script>

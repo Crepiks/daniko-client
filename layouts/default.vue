@@ -9,13 +9,13 @@
 </template>
 
 <script>
-import danikoHeader from '@/components/common/header/daniko-header'
-import danikoFooter from '@/components/common/footer/daniko-footer'
+import Header from '@/components/common/header/header'
+import Footer from '@/components/common/footer/footer'
 
 export default {
   components: {
-    'daniko-header': danikoHeader,
-    'daniko-footer': danikoFooter,
+    'daniko-header': Header,
+    'daniko-footer': Footer,
   },
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nuxt-link class="button" :to="`/${to}`"><slot></slot></nuxt-link>
+    <nuxt-link class="button" :to="to"><slot /></nuxt-link>
   </div>
 </template>
 
@@ -26,9 +26,9 @@ export default {
   background-color: $primary;
   transition: 200ms ease-in-out;
   cursor: pointer;
+}
 
-  &:hover {
-    opacity: 0.7;
-  }
+.button:hover {
+  opacity: 0.7;
 }
 </style>
