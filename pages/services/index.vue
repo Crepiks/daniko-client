@@ -32,8 +32,8 @@ export default {
 
 @media all and (max-width: 500px) {
   .services-title {
-    margin-bottom: 22px;
-    font-size: 24px;
+    margin-bottom: 16px;
+    font-size: 22px;
   }
 }
 </style>

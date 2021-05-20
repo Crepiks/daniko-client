@@ -18,9 +18,9 @@
 </template>
 
 <script>
-import DanikoWorkerMainInfo from '@/components/worker/worker-main-info/daniko-worker-main-info.vue'
+import DanikoWorkerMainInfo from '@/components/workers/worker-main-info/daniko-worker-main-info.vue'
 import Schedule from '@/components/common/schedule/schedule.vue'
-import DanikoWorkerProvidedServices from '@/components/worker/worker-provided-services/daniko-worker-provided-services.vue'
+import DanikoWorkerProvidedServices from '@/components/workers/worker-provided-services/daniko-worker-provided-services.vue'
 import worker from '@/data/worker.js'
 
 export default {
@@ -29,12 +29,9 @@ export default {
     schedule: Schedule,
     'daniko-worker-provided-services': DanikoWorkerProvidedServices,
   },
-
-  data() {
-    return {
-      worker: worker,
-    }
-  },
+  data: () => ({
+    worker: worker,
+  }),
 }
 </script>
 

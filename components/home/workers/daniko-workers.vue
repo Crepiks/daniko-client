@@ -1,32 +1,32 @@
 <template>
   <section class="workers">
-    <div class="workers-header">
-      <h2 class="workers-title">Специалисты</h2>
-      <nuxt-link class="link" to="/workers">
-        <span class="link-label">Все специалисты</span>
-        <i class="bx bx-right-arrow-alt link-icon"></i>
+    <div class="workers__header">
+      <h2 class="workers__title">Специалисты</h2>
+      <nuxt-link class="workers__link" to="/workers">
+        <span class="workers__link-label">Все специалисты</span>
+        <i class="bx bx-right-arrow-alt workers__link-icon"></i>
       </nuxt-link>
     </div>
-    <div class="workers-cards">
-      <daniko-worker-card
+    <div class="workers__cards">
+      <worker-card
         v-for="worker in workersRow"
+        :id="worker.id"
         :key="worker.id"
-        :imagePath="worker.imagePath"
+        :image-path="worker.imagePath"
         :name="worker.name"
         :job="worker.job"
-        :id="worker.id"
       />
     </div>
   </section>
 </template>
 
 <script>
-import DanikoWorkerCard from '@/components/common/worker-card/daniko-worker-card'
+import WorkerCard from '@/components/workers/worker-card/worker-card'
 import workers from '@/data/workers.js'
 
 export default {
   components: {
-    'daniko-worker-card': DanikoWorkerCard,
+    'worker-card': WorkerCard,
   },
   data: () => ({
     workers: workers,
@@ -46,87 +46,83 @@ export default {
   width: 100%;
   display: flex;
   flex-direction: column;
-
-  &-header {
-    margin-bottom: 45px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  &-title {
-    color: $main-dark;
-    font-size: 25px;
-  }
-
-  &-cards {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 20px;
-    row-gap: 20px;
-  }
 }
 
-.link {
+.workers__header {
+  margin-bottom: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.workers__title {
+  color: $main-dark;
+  font-size: 25px;
+}
+
+.workers__cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.workers__link {
   display: flex;
   align-items: center;
   text-decoration: none;
   transition: 200ms ease-in-out;
   cursor: pointer;
+}
 
-  &:hover {
-    opacity: 0.7;
-  }
+.workers__link:hover {
+  opacity: 0.7;
+}
 
-  &-label {
-    margin-right: 10px;
-    color: $primary;
-    font-size: 18px;
-    font-weight: 600;
-  }
+.workers__link-label {
+  margin-right: 10px;
+  color: $primary;
+  font-size: 18px;
+  font-weight: 600;
+}
 
-  &-icon {
-    color: $primary;
-    font-size: 20px;
-  }
+.workers__link-icon {
+  color: $primary;
+  font-size: 20px;
 }
 
 @media (max-width: 1024px) {
-  .workers {
-    &-title {
-      font-size: 30px;
-    }
+  .workers__title {
+    font-size: 30px;
   }
 
-  .link {
-    &-label {
-      font-size: 20px;
-    }
+  .workers__link-label {
+    font-size: 20px;
+  }
 
-    &-icon {
-      font-size: 26px;
-    }
+  .workers__link-icon {
+    font-size: 26px;
   }
 }
 
 @media (max-width: 900px) {
-  .workers-cards {
+  .workers__cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 500px) {
-  .workers-title {
+  .workers__header {
+    margin-bottom: 30px;
+  }
+
+  .workers__title {
     font-size: 24px;
   }
 
-  .link-label {
+  .workers__link-label {
     font-size: 16px;
-  }
-
-  .workers-header {
-    margin-bottom: 30px;
   }
 }
 </style>

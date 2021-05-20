@@ -1,22 +1,22 @@
 <template>
   <div class="grid">
-    <daniko-worker-card
+    <worker-card
       v-for="worker in workers"
       :key="worker.id"
-      :imagePath="worker.imagePath"
+      :id="worker.id"
+      :image-path="worker.imagePath"
       :name="worker.name"
       :job="worker.job"
-      :id="worker.id"
     />
   </div>
 </template>
 
 <script>
-import DanikoWorkerCard from '@/components/common/worker-card/daniko-worker-card'
+import WorkerCard from '@/components/workers/worker-card/worker-card'
 
 export default {
   components: {
-    'daniko-worker-card': DanikoWorkerCard,
+    'worker-card': WorkerCard,
   },
   props: {
     workers: {
@@ -31,13 +31,22 @@ export default {
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 350px;
   column-gap: 20px;
-  row-gap: 40px;
+  row-gap: 20px;
 }
 
 @media (max-width: 900px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .grid {
+    grid-auto-rows: 200px;
+    column-gap: 10px;
+    row-gap: 10px;
   }
 }
 </style>

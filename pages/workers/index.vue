@@ -1,24 +1,21 @@
 <template>
   <div class="workers-page">
     <h1 class="workers-title">Специалисты</h1>
-    <daniko-workers-grid :workers="workers" />
+    <workers-grid :workers="workers" />
   </div>
 </template>
 
 <script>
-import danikoWorkersGrid from '@/components/workers/workers-grid/daniko-workers-grid'
+import WorkersGrid from '@/components/workers/workers-grid/daniko-workers-grid'
 import workers from '@/data/workers.js'
 
 export default {
   components: {
-    'daniko-workers-grid': danikoWorkersGrid,
+    'workers-grid': WorkersGrid,
   },
-
-  data() {
-    return {
-      workers: workers,
-    }
-  },
+  data: () => ({
+    workers: workers,
+  }),
 }
 </script>
 
@@ -35,8 +32,8 @@ export default {
 
 @media all and (max-width: 500px) {
   .workers-title {
-    margin-bottom: 22px;
-    font-size: 24px;
+    margin-bottom: 16px;
+    font-size: 22px;
   }
 }
 </style>
