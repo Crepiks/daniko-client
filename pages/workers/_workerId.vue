@@ -1,33 +1,31 @@
 <template>
   <div class="worker-page">
     <div class="worker-main">
-      <daniko-worker-main-info
-        :imagePath="worker.imagePath"
+      <worker-info
         :name="worker.name"
         :job="worker.job"
         :description="worker.description"
+        :image-path="worker.imagePath"
       />
     </div>
     <div class="worker-extra">
       <schedule class="worker-schedule" :schedule="worker.schedule" />
-      <daniko-worker-provided-services
-        :providedServices="worker.providedServices"
-      />
+      <services :services="worker.services" />
     </div>
   </div>
 </template>
 
 <script>
-import DanikoWorkerMainInfo from '@/components/workers/worker-main-info/daniko-worker-main-info.vue'
-import Schedule from '@/components/common/schedule/schedule.vue'
-import DanikoWorkerProvidedServices from '@/components/workers/worker-provided-services/daniko-worker-provided-services.vue'
+import WorkerInfo from '@/components/workers/worker-info/worker-info'
+import Schedule from '@/components/common/schedule/schedule'
+import Services from '@/components/workers/services/services'
 import worker from '@/data/worker.js'
 
 export default {
   components: {
-    'daniko-worker-main-info': DanikoWorkerMainInfo,
+    'worker-info': WorkerInfo,
     schedule: Schedule,
-    'daniko-worker-provided-services': DanikoWorkerProvidedServices,
+    services: Services,
   },
   data: () => ({
     worker: worker,
@@ -36,26 +34,38 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.worker {
-  &-page {
-    padding: 30px 0 0 0;
-    display: flex;
+.worker-page {
+  padding: 30px 0 0 0;
+  display: flex;
+}
+
+.worker-main {
+  width: 350px;
+}
+
+.worker-extra {
+  width: 100%;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.worker-schedule {
+  margin-bottom: 40px;
+}
+
+@media all and (max-width: 600px) {
+  .worker-page {
+    display: block;
   }
 
-  &-main {
-    width: 250px;
-  }
-
-  &-extra {
-    padding-left: 50px;
+  .worker-main {
     width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
   }
 
-  &-schedule {
-    margin-bottom: 50px;
+  .worker-extra {
+    margin: 40px 0 0;
   }
 }
 </style>

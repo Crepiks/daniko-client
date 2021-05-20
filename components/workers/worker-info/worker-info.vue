@@ -34,35 +34,33 @@ export default {
 
 <style lang="scss" scoped>
 .main-info {
-  width: 250px;
   display: flex;
   flex-direction: column;
   color: $main-dark;
+}
 
-  &-image {
-    margin: 0 0 20px 0;
-    width: 250px;
-    height: 270px;
-    border-radius: 10px;
-    background-size: cover;
-    background-position: center top;
-  }
+.main-info-image {
+  margin: 0 0 20px 0;
+  height: 300px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center top;
+}
 
-  &-title {
-    margin: 0 0 5px 0;
-    font-size: 25px;
-  }
+.main-info-title {
+  margin: 0 0 5px 0;
+  font-size: 25px;
+}
 
-  &-subtitle {
-    margin: 0 0 10px 0;
-    font-size: 16px;
-  }
+.main-info-subtitle {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+}
 
-  &-description {
-    font-size: 16px;
-    font-weight: lighter;
-    line-height: 130%;
-    opacity: 0.8;
-  }
+.main-info-description {
+  font-size: 16px;
+  font-weight: lighter;
+  line-height: 130%;
+  opacity: 0.8;
 }
 </style>

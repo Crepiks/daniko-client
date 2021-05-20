@@ -15,7 +15,7 @@ export default {
     saturday: '',
     sunday: '',
   },
-  providedServices: [
+  services: [
     {
       id: 1,
       name: 'Обследование',
