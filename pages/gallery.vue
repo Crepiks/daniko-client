@@ -1,19 +1,17 @@
 <template>
-  <div class="gallery-page">
+  <div class="gallery">
     <div
-      class="gallery-main"
+      class="gallery__active"
       :style="{ backgroundImage: `url(${activeImage.path})` }"
-    ></div>
-    <div class="gallery">
-      <div class="gallery-images">
-        <div
-          class="gallery-image"
-          v-for="image in gallery"
-          :key="image.id"
-          :style="{ backgroundImage: `url(${image.path})` }"
-          @click="changeActiveImage(image.id)"
-        ></div>
-      </div>
+    />
+    <div class="gallery__images">
+      <div
+        class="gallery__image"
+        v-for="image in gallery"
+        :key="image.id"
+        :style="{ backgroundImage: `url(${image.path})` }"
+        @click="changeActiveImage(image.id)"
+      ></div>
     </div>
   </div>
 </template>
@@ -22,20 +20,13 @@
 import gallery from '@/data/gallery.js'
 
 export default {
-  data() {
-    return {
-      gallery: gallery,
-      activeImage: {
-        id: 0,
-        path: '',
-      },
-    }
-  },
-
-  mounted() {
-    this.activeImage = this.gallery[0]
-  },
-
+  data: () => ({
+    gallery,
+    activeImage: {
+      id: 0,
+      path: '',
+    },
+  }),
   methods: {
     changeActiveImage(imageId) {
       gallery.forEach((image) => {
@@ -45,50 +36,63 @@ export default {
       })
     },
   },
+  mounted() {
+    this.activeImage = this.gallery[0]
+  },
 }
 </script>
 
 <style lang="scss" scoped>
 .gallery {
-  position: relative;
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  height: calc(100vh - 200px);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 20px;
+}
 
-  &-main {
-    position: fixed;
-    margin-bottom: 50px;
-    width: 700px;
-    height: 500px;
-    border-radius: 10px;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+.gallery__active {
+  height: 60vh;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.gallery__images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 80px;
+  column-gap: 15px;
+  row-gap: 15px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.gallery__image {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media all and (max-width: 800px) {
+  .gallery {
+    height: auto;
+    grid-template-columns: 1fr;
   }
 
-  &-images {
-    width: calc(100% - 750px);
-    box-sizing: border-box;
-    display: grid;
+  .gallery__images {
+    height: 70vh;
+    margin-top: 40px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media all and (max-width: 500px) {
+  .gallery__images {
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 15px;
-    row-gap: 15px;
-  }
-
-  &-image {
-    width: 100%;
-    height: 100px;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 150ms ease-in-out;
-
-    &:hover {
-      transform: scale(1.03);
-    }
   }
 }
 </style>
