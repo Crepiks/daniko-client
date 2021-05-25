@@ -12,24 +12,30 @@
         v-for="worker in workersRow"
         :id="worker.id"
         :key="worker.id"
-        :image-path="worker.imagePath"
-        :name="worker.name"
-        :job="worker.job"
+        :image-path="worker.image ? worker.image.path : defaultWorkerImage"
+        :name="worker.firstName + ' ' + worker.lastName"
+        :job="worker.branch"
       />
     </div>
   </section>
 </template>
 
 <script>
-import WorkerCard from '@/components/workers/worker-card/worker-card'
-import workers from '@/data/workers.js'
+import WorkerCard from '@/components/workers/worker-card/worker-card';
+import defaultWorkerImage from "@/static/images/default-worker-image.png";
 
 export default {
+  props: {
+    workers: {
+      type: Array,
+      required: true,
+    }
+  },
   components: {
     'worker-card': WorkerCard,
   },
   data: () => ({
-    workers,
+    defaultWorkerImage: defaultWorkerImage
   }),
   computed: {
     workersRow() {

@@ -38,6 +38,11 @@ export default {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.03);
   overflow: hidden;
   text-decoration: none;
+  transition: 150ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.03);
+  }
 }
 
 .service-card__image {
@@ -62,6 +67,12 @@ export default {
 }
 
 @media all and (max-width: 500px) {
+  .service-card {
+    &:hover {
+      transform: none;
+    }
+  }
+
   .service-card__title {
     font-size: 14px;
   }

@@ -7,15 +7,16 @@
 
 <script>
 import WorkersGrid from '@/components/workers/workers-grid/daniko-workers-grid'
-import workers from '@/data/workers.js'
+import { getWorkers } from '@/requests/workers.js'
 
 export default {
   components: {
     'workers-grid': WorkersGrid,
   },
-  data: () => ({
-    workers: workers,
-  }),
+  async asyncData({ params, $axios }) {
+    const workers = await getWorkers($axios)
+    return workers
+  },
 }
 </script>
 

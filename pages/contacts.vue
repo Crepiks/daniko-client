@@ -4,27 +4,30 @@
       <h1 class="contacts-title">Свяжитесь с нами</h1>
       <div class="contact">
         <span class="contact-label">Номер телефона:</span>
-        <span class="contact-data">{{ contacts.phoneNumber }}</span>
+        <span class="contact-data">{{ contacts.phone || '—' }}</span>
       </div>
       <div class="contact">
         <span class="contact-label">Электронная почта:</span>
-        <span class="contact-data">{{ contacts.email }}</span>
+        <span class="contact-data">{{ contacts.email || '—' }}</span>
       </div>
       <div class="contact">
         <span class="contact-label">Почтовый индекс:</span>
-        <span class="contact-data">{{ contacts.mailIndex }}</span>
+        <span class="contact-data">{{ contacts.postIndex || '—' }}</span>
       </div>
       <div class="contact">
         <span class="contact-label">Адрес:</span>
-        <span class="contact-data">{{ contacts.address }}</span>
+        <span class="contact-data">{{ contacts.address || '—' }}</span>
       </div>
       <div class="map">
         <yandex-map
-          :coords="mapCoords"
-          :zoom="mapZoom"
+          :coords="contacts.lat ? [contacts.lat, contacts.lon] : [0, 0]"
+          :zoom="16"
           style="width: 100%; height: 100%"
         >
-          <ymap-marker marker-id="1" :coords="markerCoords"></ymap-marker>
+          <ymap-marker
+            marker-id="1"
+            :coords="contacts.lat ? [contacts.lat, contacts.lon] : [0, 0]"
+          ></ymap-marker>
         </yandex-map>
       </div>
     </div>
@@ -37,20 +40,13 @@
 </template>
 
 <script>
-import mockContacts from '@/data/contacts.js'
+import { getContacts } from '@/requests/contacts.js'
 
 export default {
-  data: () => ({
-    mapCoords: mockContacts.coords,
-    mapZoom: 16,
-    markerCoords: mockContacts.coords,
-    contacts: {
-      phoneNumber: mockContacts.phoneNumber,
-      email: mockContacts.email,
-      address: mockContacts.address,
-      mailIndex: mockContacts.mailIndex,
-    },
-  }),
+  async asyncData({ params, $axios }) {
+    const contacts = await getContacts($axios)
+    return contacts
+  },
   methods: {
     updateValue(value) {
       this.$emit('input', value)

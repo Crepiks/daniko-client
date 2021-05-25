@@ -7,15 +7,16 @@
 
 <script>
 import ServicesGrid from '@/components/services/services-grid/services-grid'
-import services from '@/data/services.js'
+import { getServices } from '@/requests/services.js'
 
 export default {
   components: {
     'services-grid': ServicesGrid,
   },
-  data: () => ({
-    services: services,
-  }),
+  async asyncData({ params, $axios }) {
+    const services = await getServices($axios)
+    return services
+  },
 }
 </script>
 

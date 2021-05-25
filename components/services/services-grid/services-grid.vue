@@ -3,8 +3,8 @@
     <service-card
       v-for="service in services"
       :key="service.id"
-      :imagePath="service.imagePath"
-      :name="service.name"
+      :imagePath="service.image ? service.image.path : defaultServiceImage"
+      :name="service.title"
       :id="service.id"
     />
   </div>
@@ -12,11 +12,15 @@
 
 <script>
 import ServiceCard from '@/components/services/service-card/service-card'
+import defaultServiceImage from '@/static/images/default-service-image.png'
 
 export default {
   components: {
     'service-card': ServiceCard,
   },
+  data: () => ({
+    defaultServiceImage: defaultServiceImage,
+  }),
   props: {
     services: {
       type: Array,

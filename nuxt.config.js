@@ -41,6 +41,11 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxtjs/style-resources', '@nuxtjs/axios'],
 
+  axios: {
+    baseURL: process.env.VUE_APP_API_URL || 'http://localhost:3000',
+    browserBaseURL: process.env.VUE_APP_API_URL || 'http://localhost:3000',
+  },
+
   styleResources: {
     scss: ['~/assets/styles/variables.scss'],
   },

@@ -43,6 +43,11 @@ export default {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.03);
   text-decoration: none;
   overflow: hidden;
+  transition: 150ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.03);
+  }
 }
 
 .worker-card__image {
@@ -74,6 +79,12 @@ export default {
 }
 
 @media all and (max-width: 500px) {
+  .worker-card {
+    &:hover {
+      transform: none;
+    }
+  }
+
   .worker-card__title {
     margin: 0;
     font-size: 14px;

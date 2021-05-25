@@ -17,11 +17,20 @@
 </template>
 
 <script>
+// import { getPhotos } from '@/requests/photos.js'
 import gallery from '@/data/gallery.js'
 
 export default {
+  // async asyncData({params, $axios}) {
+  //   const photos = await getPhotos($axios)
+  //   return photos
+  // },
+  // async mounted() {
+  //   const photos = await getPhotos(this.$axios)
+  //   console.log(photos)
+  // },
   data: () => ({
-    gallery,
+    gallery: gallery,
     activeImage: {
       id: 0,
       path: '',
