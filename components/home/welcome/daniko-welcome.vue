@@ -31,12 +31,13 @@ export default {
 
 <style lang="scss" scoped>
 .welcome {
+  padding-top: 12%;
   height: calc(100vh - 100px);
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .welcome-text {

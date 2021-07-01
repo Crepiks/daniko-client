@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link to="/">
+  <nuxt-link to="/home">
     <img class="logo" src="@/static/images/logo.svg" alt="Daniko" />
   </nuxt-link>
 </template>

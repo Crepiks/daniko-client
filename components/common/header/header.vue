@@ -4,7 +4,7 @@
       <daniko-logo />
     </div>
     <div class="header-links">
-      <nuxt-link class="header-link" to="/">Главная</nuxt-link>
+      <nuxt-link class="header-link" to="/home">Главная</nuxt-link>
       <nuxt-link class="header-link" to="/services">Услуги</nuxt-link>
       <nuxt-link class="header-link" to="/workers">Специалисты</nuxt-link>
       <nuxt-link class="header-link" to="/gallery">Фотогалерея</nuxt-link>
@@ -78,9 +78,10 @@ export default {
     font-weight: bold;
     text-decoration: none;
     transition: 200ms ease-in-out;
+    opacity: 0.8;
 
     &:hover {
-      opacity: 0.7;
+      opacity: 1;
     }
   }
 
@@ -91,6 +92,10 @@ export default {
       display: none;
     }
   }
+}
+
+.nuxt-link-active {
+  color: $primary;
 }
 
 @media (max-width: 1024px) {
@@ -148,10 +153,6 @@ export default {
         text-decoration: none;
       }
     }
-  }
-
-  .nuxt-link-active {
-    color: $primary;
   }
 }
 </style>

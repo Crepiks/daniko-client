@@ -11,7 +11,11 @@
       <service-card
         v-for="service in servicesRow"
         :key="service.id"
-        :image-path="service.image ? service.image.path : defaultServiceImage"
+        :image-path="
+          service.images.length > 0
+            ? baseUrl + service.images[0].path
+            : defaultServiceImage
+        "
         :name="service.title"
         :id="service.id"
       />
@@ -22,6 +26,7 @@
 <script>
 import ServiceCard from '@/components/services/service-card/service-card'
 import defaultServiceImage from '@/static/images/default-service-image.png'
+import config from '@/config/config'
 
 export default {
   props: {
@@ -30,12 +35,16 @@ export default {
       required: true,
     },
   },
+
   components: {
     'service-card': ServiceCard,
   },
+
   data: () => ({
     defaultServiceImage: defaultServiceImage,
+    baseUrl: config.apiUrl,
   }),
+
   computed: {
     servicesRow() {
       return this.services.slice(0, 4)
