@@ -4,7 +4,9 @@
       v-for="worker in workers"
       :key="worker.id"
       :id="worker.id"
-      :image-path="worker.image ? worker.image.path : defaultWorkerImage"
+      :image-path="
+        worker.image.path ? baseUrl + worker.image.path : defaultWorkerImage
+      "
       :name="worker.firstName + ' ' + worker.lastName"
       :job="worker.branch"
     />
@@ -14,6 +16,7 @@
 <script>
 import WorkerCard from '@/components/workers/worker-card/worker-card'
 import defaultWorkerImage from '@/static/images/default-worker-image.png'
+import config from '@/config/config'
 
 export default {
   components: {
@@ -28,6 +31,7 @@ export default {
   data() {
     return {
       defaultWorkerImage: defaultWorkerImage,
+      baseUrl: config.apiUrl,
     }
   },
 }
