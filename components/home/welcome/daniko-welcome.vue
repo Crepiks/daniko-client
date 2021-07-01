@@ -61,8 +61,9 @@ export default {
 .welcome-paragraph {
   margin-bottom: 35px;
   color: $main-dark;
-  font-size: 18px;
-  opacity: 0.6;
+  font-size: 20px;
+  line-height: 140%;
+  opacity: 0.5;
 }
 
 @media (max-width: 1024px) {

@@ -2,51 +2,53 @@
   <div class="gallery">
     <div
       class="gallery__active"
-      :style="{ backgroundImage: `url(${activeImage.path})` }"
+      :style="{ backgroundImage: `url(${baseUrl + activePhoto.image.path})` }"
     />
     <div class="gallery__images">
       <div
         class="gallery__image"
-        v-for="image in gallery"
-        :key="image.id"
-        :style="{ backgroundImage: `url(${image.path})` }"
-        @click="changeActiveImage(image.id)"
+        v-for="photo in photos"
+        :key="photo.id"
+        :style="{ backgroundImage: `url(${baseUrl + photo.image.path})` }"
+        @click="changeActivePhoto(photo.id)"
       ></div>
     </div>
   </div>
 </template>
 
 <script>
-// import { getPhotos } from '@/requests/photos.js'
-import gallery from '@/data/gallery.js'
+import { getPhotos } from '@/requests/photos.js'
+import config from '@/config/config'
 
 export default {
-  // async asyncData({params, $axios}) {
-  //   const photos = await getPhotos($axios)
-  //   return photos
-  // },
-  // async mounted() {
-  //   const photos = await getPhotos(this.$axios)
-  //   console.log(photos)
-  // },
+  async asyncData({ params, $axios }) {
+    const photos = await getPhotos($axios)
+    return photos
+  },
+
   data: () => ({
-    gallery: gallery,
-    activeImage: {
+    activePhoto: {
       id: 0,
-      path: '',
+      image: {
+        path: '',
+      },
     },
+    baseUrl: config.apiUrl,
   }),
+
   methods: {
-    changeActiveImage(imageId) {
-      gallery.forEach((image) => {
-        if (image.id == imageId) {
-          this.activeImage = image
+    changeActivePhoto(photoId) {
+      this.photos.forEach((photo) => {
+        if (photo.id == photoId) {
+          this.activePhoto = photo
         }
       })
     },
   },
+
   mounted() {
-    this.activeImage = this.gallery[0]
+    console.log(this.photos)
+    this.activePhoto = this.photos[0]
   },
 }
 </script>
@@ -63,19 +65,24 @@ export default {
 .gallery__active {
   height: 60vh;
   border-radius: 10px;
+  background-color: #dbdbdb;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  box-shadow: 0 0 30px #3c3c3c10;
 }
 
 .gallery__images {
+  padding: 15px;
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 80px;
   column-gap: 15px;
   row-gap: 15px;
-  box-sizing: border-box;
+  border-radius: 10px;
   overflow-y: auto;
+  background-color: #dbdbdb40;
 }
 
 .gallery__image {
@@ -84,6 +91,11 @@ export default {
   background-repeat: no-repeat;
   border-radius: 5px;
   cursor: pointer;
+  transition: 200ms ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 @media all and (max-width: 800px) {
