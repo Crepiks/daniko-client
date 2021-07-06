@@ -108,6 +108,10 @@ export default {
 }
 
 @media (max-width: 500px) {
+  .welcome {
+    padding-top: 0;
+  }
+
   .welcome-text {
     width: 90%;
     text-align: center;

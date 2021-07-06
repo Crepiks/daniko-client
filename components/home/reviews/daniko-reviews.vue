@@ -191,6 +191,80 @@ export default {
     }
   }
 }
+
+@media(max-width: 900px) {
+  .reviews {
+    &-title {
+      font-size: 28px;
+    }
+  }
+
+  .swiper {
+    &-container {
+      width: 600px;
+    }
+
+    &-button {
+      font-size: 40px;
+    }
+  }
+
+  .slide {
+    min-height: 180px;
+
+    &-text {
+      padding: 0 30px;
+      font-size: 20px;
+    }
+
+    &-author {
+      font-size: 18px;
+    }
+  }
+}
+
+@media(max-width: 650px) {
+  .swiper {
+    &-container {
+      width: 500px;
+    }
+
+    &-button {
+      font-size: 40px;
+    }
+  }
+}
+
+@media(max-width: 650px) {
+  .reviews {
+    &-title {
+      font-size: 24px;
+    }
+  }
+
+  .swiper {
+    &-container {
+      width: 360px;
+    }
+
+    &-button {
+      font-size: 36px;
+    }
+  }
+
+  .slide {
+    min-height: 180px;
+
+    &-text {
+      padding: 0 30px;
+      font-size: 18px;
+    }
+
+    &-author {
+      font-size: 16px;
+    }
+  }
+}
 </style>
 
 <style lang="scss">
