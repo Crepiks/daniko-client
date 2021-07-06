@@ -2,20 +2,27 @@
   <div class="main-info">
     <div
       class="main-info__image"
-      :style="{ backgroundImage: `url(${imagePath})` }"
+      :style="{
+        backgroundImage: `url(${
+          images.length > 0 ? baseUrl + images[0].path : defaultServiceImage
+        })`,
+      }"
     ></div>
-    <h1 class="main-info__title">{{ name }}</h1>
+    <h1 class="main-info__title">{{ title }}</h1>
     <p class="main-info__description">{{ description }}</p>
   </div>
 </template>
 
 <script>
+import config from '@/config/config'
+import defaultServiceImage from '@/static/images/default-service-image.png'
+
 export default {
   props: {
-    imagePath: {
-      type: String,
+    images: {
+      type: Array,
     },
-    name: {
+    title: {
       type: String,
       required: true,
     },
@@ -24,6 +31,11 @@ export default {
       required: true,
     },
   },
+
+  data: () => ({
+    baseUrl: config.apiUrl,
+    defaultServiceImage: defaultServiceImage,
+  }),
 }
 </script>
 

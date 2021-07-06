@@ -6,8 +6,8 @@
         v-for="worker in workers"
         :key="worker.id"
         :id="worker.id"
-        :title="worker.name"
-        :job="worker.job"
+        :title="worker.lastName + ' ' + worker.firstName"
+        :job="worker.branch"
       />
     </div>
   </div>

@@ -2,9 +2,9 @@
   <div class="service-page">
     <div class="service-main">
       <service-info
-        :name="service.name"
+        :title="service.title"
         :description="service.description"
-        :image-path="service.imagePath"
+        :images="service.images"
       />
     </div>
     <div class="service-extra">
@@ -18,7 +18,7 @@
 import ServiceInfo from '@/components/services/service-info/service-info'
 import Schedule from '@/components/common/schedule/schedule'
 import Workers from '@/components/services/workers/workers'
-import service from '@/data/service.js'
+import { getService } from '@/requests/services.js'
 
 export default {
   components: {
@@ -26,9 +26,11 @@ export default {
     schedule: Schedule,
     workers: Workers,
   },
-  data: () => ({
-    service,
-  }),
+
+  async asyncData({ params, $axios }) {
+    const service = await getService(params.serviceId, $axios)
+    return service
+  },
 }
 </script>
 
