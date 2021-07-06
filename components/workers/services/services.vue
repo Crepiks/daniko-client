@@ -6,7 +6,7 @@
         v-for="service in services"
         :key="service.id"
         :id="service.id"
-        :title="service.name"
+        :title="service.title"
       />
     </div>
   </div>

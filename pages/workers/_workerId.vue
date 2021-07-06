@@ -2,10 +2,12 @@
   <div class="worker-page">
     <div class="worker-main">
       <worker-info
-        :name="worker.name"
-        :job="worker.job"
+        :name="worker.lastName + ' ' + worker.firstName"
+        :job="worker.branch"
         :description="worker.description"
-        :image-path="worker.imagePath"
+        :image-path="
+          worker.image.path ? baseUrl + worker.image.path : defaultWorkerImage
+        "
       />
     </div>
     <div class="worker-extra">
@@ -19,7 +21,9 @@
 import WorkerInfo from '@/components/workers/worker-info/worker-info'
 import Schedule from '@/components/common/schedule/schedule'
 import Services from '@/components/workers/services/services'
-import worker from '@/data/worker.js'
+import defaultWorkerImage from '@/static/images/default-worker-image.png'
+import { getWorker } from '@/requests/workers.js'
+import config from '@/config/config'
 
 export default {
   components: {
@@ -27,9 +31,16 @@ export default {
     schedule: Schedule,
     services: Services,
   },
+
   data: () => ({
-    worker: worker,
+    baseUrl: config.apiUrl,
+    defaultWorkerImage: defaultWorkerImage,
   }),
+
+  async asyncData({ params, $axios }) {
+    const worker = await getWorker(params.workerId, $axios)
+    return worker
+  },
 }
 </script>
 
