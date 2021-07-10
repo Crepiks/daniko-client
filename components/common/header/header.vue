@@ -8,6 +8,7 @@
       <nuxt-link class="header-link" to="/services">Услуги</nuxt-link>
       <nuxt-link class="header-link" to="/workers">Специалисты</nuxt-link>
       <nuxt-link class="header-link" to="/gallery">Фотогалерея</nuxt-link>
+      <nuxt-link class="header-link" to="/about">О Данико</nuxt-link>
       <nuxt-link class="header-link" to="/contacts">Контакты</nuxt-link>
     </div>
     <i

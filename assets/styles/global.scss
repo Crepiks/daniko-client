@@ -3,12 +3,18 @@
   src: url('../../static/fonts/SF.ttf');
 }
 
+@font-face {
+  font-family: 'PT Sans';
+  src: url('../../static/fonts/pt-sans.ttf');
+}
+
 * {
   margin: 0;
-  padding: 0;
-  font-family: 'SF Pro';
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  font-family: 'SF Pro';
   background-color: $background;
 }
