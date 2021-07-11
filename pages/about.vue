@@ -41,7 +41,7 @@
             Миссия ТОО «Медицинский центр «Данико»
           </h3>
           <h3 v-else class="section__title" key="first-section-title-kz">
-            «Данико» медициналық орталығы» ЖШС миссиясы
+            «Данико» Медициналық орталық» ЖШС-сі
           </h3>
         </transition>
         <transition name="fade" mode="out-in">
@@ -50,20 +50,14 @@
             class="section__text"
             key="first-section-paragraph-ru"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
-            omnis blanditiis quo in quia ipsum saepe distinctio dolor
-            repudiandae aspernatur aliquid consequatur veritatis delectus ullam!
-            Eaque omnis velit qui possimus sed vitae facilis aliquam nihil
-            fugit, libero aperiam assumenda, vel suscipit! Obcaecati repellat
-            eius laboriosam dolor dolores animi tempore aperiam.
+            Наша МИССИЯ - оказание доступной качественной
+            квалифицированноймедицинской помощи населению, направленное на
+            реабилитацию и постоянное улучшение здоровья граждан.
           </p>
           <p v-else class="section__text" key="first-section-paragraph-kz">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-            fuga, maxime quae dignissimos reprehenderit sequi libero quidem ipsa
-            eaque, hic distinctio laboriosam magni. Amet officia corrupti
-            perferendis ratione, alias architecto facere? Beatae, assumenda iste
-            temporibus deleniti quidem et doloremque, tenetur modi quod fugit
-            minus autem alias animi, magnam odit. Accusamus.
+            Біздің мақсат - мүддеміз - халыққа қолжетімді, сапалы, білікті
+            медициналық көмек көрсету, тұрақты емделуші азаматтардың денсаулығын
+            жақсарту мен оңалту.
           </p>
         </transition>
       </section>
@@ -77,7 +71,7 @@
             Политика ТОО «Медицинский центр «Данико»
           </h3>
           <h3 v-else class="section__title" key="second-section-title-kz">
-            «Данико» медициналық орталығы» ЖШС саясаты
+            «Данико» Медициналық орталық» ЖШС-нің саясаты
           </h3>
         </transition>
         <transition name="fade" mode="out-in">
@@ -86,54 +80,60 @@
             class="section__text"
             key="second-section-paragraph-ru"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
-            placeat modi at minus illo harum perferendis? Fugiat repudiandae id
-            sit exercitationem facere quasi deserunt, labore soluta aspernatur,
-            qui provident neque eligendi nesciunt velit optio tempora est
-            temporibus at quo quaerat rerum! Voluptatum veritatis quia nihil
-            quibusdam laboriosam rem ea repellat nesciunt iusto tempore, dolorum
-            quo eligendi doloremque minima nulla maiores earum aperiam tempora
-            placeat nisi recusandae itaque, repellendus molestias. Voluptates,
-            ipsum nam minus ex molestiae modi animi cum non quasi sequi libero
-            minima voluptas culpa vero, dolorem totam, quis illum fuga obcaecati
-            pariatur omnis. Quas deleniti numquam quibusdam eligendi quidem
-            omnis eaque magnam dolores, soluta tempore modi culpa consectetur
-            inventore, accusamus ducimus in doloribus error? Neque, eos sapiente
-            ex repellat nostrum illum dolore, ad soluta, totam voluptate quo
-            incidunt deleniti mollitia harum? Expedita magnam dolorum dolores?
-            Ullam adipisci eum nemo fugiat magni possimus est nam libero iusto
-            deserunt? Excepturi pariatur eius repellat, adipisci molestiae esse
-            vero a nam aut sunt obcaecati blanditiis voluptatum earum nihil
-            neque expedita in debitis assumenda iste, reiciendis possimus!
-            Tenetur itaque eligendi, est ab error voluptatibus accusantium alias
-            repellat quas repudiandae aspernatur ullam saepe atque esse animi
-            adipisci. Et quod ad iste accusantium. Laboriosam, natus harum.
+            Политика ТОО “Медицинского центра «Данико» полностью согласуется с
+            Посланием Главы государства Н.Назарбаева о поэтапном внедрении
+            международных стандартов в систему здравоохранения, повышения уровня
+            качества медицинских услуг. Мы понимаем, что оказание
+            лечебно-оздоровительной медицинской помощи населению — наша
+            миссия.<br /><br />
+            Наша главная задача состоит в том, чтобы оказываемые нами услуги
+            соответствовали самым строгим требования потребителей наших услуг -
+            наших пациентов. Руководство Центра, отчетливо понимая важность
+            обеспечения населения качественной медицинской помощью, принимает на
+            себя обязательства по достижению самого высокого уровня качества
+            услуг предоставляемых нашей организацией.<br /><br />
+            Мы исходим из того, что должный уровень будет достигнут, если в
+            своей профессиональной деятельности весь персонал будет опираться на
+            международный опыт и последние достижения науки, если все члены
+            нашего коллектива будут неуклонно овладевать новейшими
+            апробированными методами исследований, поддерживать высочайший
+            уровень своей квалификации.<br /><br />
+            Для достижения высокого уровня удовлетворенности пациентов все важно
+            - и новые технологии, обеспечивающие высокую медицинских работников,
+            и комфорт, и доброжелательное, отзывчивое и чуткое отношение
+            персонала. Мы намерены расширять перечень предоставляемых
+            медицинских услуг, повышать качество услуг и комфортность пребывания
+            направленное на повышение удовлетворенности пациента.
           </p>
           <p v-else class="section__text" key="second-section-paragraph-kz">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-            cumque odio molestias quas perferendis ad libero, earum iste saepe
-            consequuntur? Voluptate similique illum praesentium illo. Eos,
-            deleniti, quod aperiam reprehenderit laboriosam soluta iusto
-            voluptatem veritatis natus est error mollitia dolor minima veniam
-            ducimus. Sit nam id earum adipisci quo modi ab corporis minus, esse
-            consectetur, ullam numquam asperiores? Quod eveniet voluptatum in
-            nihil esse! Tenetur, fuga corrupti. Dolor, odit labore. Deleniti
-            quam laudantium neque sunt error. Consequuntur, nulla? Amet,
-            sapiente! Quaerat, tempora. Eveniet labore necessitatibus dolor
-            consequatur vero culpa quam! Repudiandae itaque, aspernatur
-            reiciendis dolor et eligendi quae ipsum illo cum! Error incidunt
-            atque nesciunt in tenetur, rerum possimus temporibus, illum pariatur
-            quia ad. Praesentium perspiciatis sunt, voluptatum asperiores eos
-            nobis! Quibusdam magni quis expedita eos dignissimos eius earum.
-            Reprehenderit, et. Amet, laborum! Quibusdam ab laborum magni
-            consectetur obcaecati, quidem incidunt neque cumque? Dolorum labore
-            commodi aliquam temporibus. Earum, ipsam nemo repellat, temporibus
-            ipsum dolorum quibusdam dignissimos iusto veritatis recusandae sint
-            vel maiores! Minus sint commodi facilis molestiae illum? Reiciendis
-            adipisci dolore repellat? Non voluptates tenetur unde odio, quod
-            eveniet ipsum vel vero, suscipit corporis et est repudiandae. Dicta
-            hic nisi nesciunt quaerat ipsa consequatur tempora reiciendis sequi
-            quod minima.
+            «Данико» Медициналық орталығы ЖШС-нің саясаты толығымен елбасы
+            Нұрсұлтан Әбішұлы Назарбаевтің денсаулық сақтау деңгейін көтеру,
+            мемлекеттік медициналық қызмет көрсету сапасын арттыруда халықаралық
+            стандарттар жүйесіне кезең- кезеңімен енгізутуралы Жолдауынасүйене
+            отырып жүргізіледі. Емдеу-сауықтыру, медециналық қызмет көрсету -
+            біздің басты мақсатымыз болғандықтан Біз оны жіті түсінеміз.<br /><br />
+            Біздің ең басты міндетіміз, біздің тұтынушылардың, біздің
+            емдеушілердің ең қатаң талаптарына сай көрсетілген қызметтер мен
+            атқарған жұмыстарымызды сәйкестендіру. Орталықтың басшылығы сапалы
+            медициналық көмектің маңыздылығын ескере келе халыққа, тұтынушыларға
+            сапалы түрде көмек көрсету жөнінде өздеріне міндеттемелер қабылдап,
+            орталықтың жоғарғы деңгейдегі қызмет көрсету ұйымы болуын қатаң
+            қадағалауда.<br /><br />
+            Біз өз мақсат-мүдделерімізге жету үшін өз қызметкерлеріміздің
+            халықаралық деңгейде білім сапасынан біліктілік шеберлігін арттыруда
+            қолдана отырып жаңа технологияларды игеруге сүйенуін талап етеміз,
+            жаңа технологиядағы ғылыми зерттеу жұмыстарына қол жеткізе отырып
+            барлық жаңа қолданыста жүрген тәсілдерді өз біліктілікдеңгейін
+            жетілдіруде қолдануына қолдау көрсетеміз.<br /><br />
+            Жоғарғы деңгейде қызмет көрсетуге қол жеткізу үшін емделушілердің
+            біздің қызметімізге қанағаттануын қадағалауды қолға алғанбыз,
+            әсіресе жаңа технологияларды қамтамасыз ететін жоғарғы нәтижелілігі,
+            қызмет көрсету және медициналық қызметкерлерінің кәсіби шеберлігін
+            сонымен қатар жайлылығын, жылы шырай танытып сергек көзбен қызмет
+            көрсететін қызметкерлерді іріктеліп алынған.<br /><br />
+            Біздің ұйым ұсынған медициналық қызмет сапасын арттыру, науқастар
+            мен емдеушілерді қанағаттандыруға бағытталған жаңа қызмет түрін
+            пайдалануды алдағы уақытта енгізуді жоспарлап отыр.
           </p>
         </transition>
       </section>
@@ -227,5 +227,22 @@ export default {
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+}
+
+@media (max-width: 650px) {
+  .about__header {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .about__header-title {
+      margin-bottom: 20px;
+  }
+
+  .about__button {
+      margin-left: 0;
+      margin-right: 10px;
+  }
 }
 </style>

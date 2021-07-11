@@ -21,6 +21,7 @@
       :class="{ 'header-menu-active': isMobileMenuOpen }"
     >
       <div class="header-menu-links">
+        <nuxt-link class="header-menu-link" to="/home">Главная</nuxt-link>
         <nuxt-link class="header-menu-link" to="/services">Услуги</nuxt-link>
         <nuxt-link class="header-menu-link" to="/workers"
           >Специалисты</nuxt-link
@@ -28,6 +29,7 @@
         <nuxt-link class="header-menu-link" to="/gallery"
           >Фотогалерея</nuxt-link
         >
+        <nuxt-link class="header-menu-link" to="/about">О Данико</nuxt-link>
         <nuxt-link class="header-menu-link" to="/contacts">Контакты</nuxt-link>
       </div>
     </div>
@@ -96,7 +98,7 @@ export default {
 }
 
 .nuxt-link-active {
-  color: $primary;
+  color: $primary !important;
 }
 
 @media (max-width: 1024px) {

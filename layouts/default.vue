@@ -25,6 +25,7 @@ export default {
   margin: auto;
   max-width: 1000px;
   min-height: 100vh;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
