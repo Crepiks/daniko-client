@@ -1,5 +1,5 @@
 <template>
-  <div class="gallery">
+  <div v-if="photos.length > 0" class="gallery">
     <div
       class="gallery__active"
       :style="{ backgroundImage: `url(${baseUrl + activePhoto.image.path})` }"
@@ -33,6 +33,14 @@ export default {
         path: '',
       },
     },
+    photos: [
+      {
+        id: 0,
+        image: {
+          path: '',
+        },
+      },
+    ],
     baseUrl: config.apiUrl,
   }),
 

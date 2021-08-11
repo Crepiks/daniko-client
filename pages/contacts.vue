@@ -4,19 +4,27 @@
       <h1 class="contacts-title">Свяжитесь с нами</h1>
       <div class="contact">
         <span class="contact-label">Номер телефона:</span>
-        <span class="contact-data">{{ contacts.phone || '—' }}</span>
+        <span class="contact-data">{{
+          contacts.phone ? contacts.phone : '—'
+        }}</span>
       </div>
       <div class="contact">
         <span class="contact-label">Электронная почта:</span>
-        <span class="contact-data">{{ contacts.email || '—' }}</span>
+        <span class="contact-data">{{
+          contacts.email ? contacts.email : '—'
+        }}</span>
       </div>
       <div class="contact">
         <span class="contact-label">Почтовый индекс:</span>
-        <span class="contact-data">{{ contacts.postIndex || '—' }}</span>
+        <span class="contact-data">{{
+          contacts.postIndex ? contacts.postIndex : '—'
+        }}</span>
       </div>
       <div class="contact">
         <span class="contact-label">Адрес:</span>
-        <span class="contact-data">{{ contacts.address || '—' }}</span>
+        <span class="contact-data">{{
+          contacts.address ? contacts.address : '—'
+        }}</span>
       </div>
       <div class="map">
         <yandex-map
@@ -47,6 +55,16 @@ export default {
     const contacts = await getContacts($axios)
     return contacts
   },
+
+  data: () => ({
+    contacts: {
+      phone: '',
+      email: '',
+      postIndex: '',
+      address: '',
+    },
+  }),
+
   methods: {
     updateValue(value) {
       this.$emit('input', value)
