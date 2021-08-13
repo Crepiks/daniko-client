@@ -2,7 +2,7 @@
   <div class="day-card" :class="{ 'day-card_disabled': !time }">
     <h4 class="day-card__title">{{ title }}</h4>
     <span v-if="time" class="day-card__time">
-      с {{ timeFrom }} до {{ timeFrom }}
+      с {{ timeFrom }} до {{ timeTo }}
     </span>
     <span v-else class="day-card__time">Нет приема</span>
   </div>

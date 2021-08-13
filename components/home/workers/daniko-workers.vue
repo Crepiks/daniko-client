@@ -13,7 +13,7 @@
         :id="worker.id"
         :key="worker.id"
         :image-path="
-          worker.image.path ? baseUrl + worker.image.path : defaultWorkerImage
+          worker.image ? baseUrl + worker.image.path : defaultWorkerImage
         "
         :name="worker.firstName + ' ' + worker.lastName"
         :job="worker.branch"

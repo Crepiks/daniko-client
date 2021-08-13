@@ -6,7 +6,7 @@
         :job="worker.branch"
         :description="worker.description"
         :image-path="
-          worker.image.path ? baseUrl + worker.image.path : defaultWorkerImage
+          worker.image ? baseUrl + worker.image.path : defaultWorkerImage
         "
       />
     </div>
