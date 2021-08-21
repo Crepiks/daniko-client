@@ -18,6 +18,7 @@
       ></div>
     </div>
     <h1 class="main-info__title">{{ title }}</h1>
+    <p class="main-info__price">{{ price > 0 ? price + ' тг' : '' }}</p>
     <p class="main-info__description">{{ description }}</p>
   </div>
 </template>
@@ -38,6 +39,11 @@ export default {
     description: {
       type: String,
       required: true,
+    },
+
+    price: {
+      type: Number,
+      default: 0,
     },
   },
 
@@ -100,7 +106,13 @@ export default {
   font-size: 25px;
 }
 
+.main-info__price {
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .main-info__description {
+  margin-top: 10px;
   font-size: 16px;
   font-weight: lighter;
   line-height: 130%;

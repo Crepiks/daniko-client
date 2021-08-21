@@ -18,6 +18,7 @@
         "
         :name="service.title"
         :id="service.id"
+        :price="service.price"
       />
     </div>
   </section>

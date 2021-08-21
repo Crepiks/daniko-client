@@ -4,6 +4,7 @@
       <service-info
         :title="service.title"
         :description="service.description"
+        :price="service.price"
         :images="service.images"
       />
     </div>
