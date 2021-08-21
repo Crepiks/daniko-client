@@ -1,7 +1,11 @@
 <template>
   <div class="grid">
     <service-card
-      v-for="service in services"
+      v-for="service in activeCards == 'paid'
+        ? paidServices
+        : activeCards == 'free'
+        ? freeServices
+        : services"
       :key="service.id"
       :imagePath="
         service.images.length > 0
@@ -10,6 +14,7 @@
       "
       :name="service.title"
       :id="service.id"
+      :price="service.price"
     />
   </div>
 </template>
@@ -20,17 +25,33 @@ import defaultServiceImage from '@/static/images/default-service-image.png'
 import config from '@/config/config'
 
 export default {
-  components: {
-    'service-card': ServiceCard,
-  },
-  data: () => ({
-    defaultServiceImage: defaultServiceImage,
-    baseUrl: config.apiUrl,
-  }),
   props: {
     services: {
       type: Array,
       required: true,
+    },
+    activeCards: {
+      type: String,
+      required: true,
+    },
+  },
+
+  components: {
+    'service-card': ServiceCard,
+  },
+
+  data: () => ({
+    defaultServiceImage: defaultServiceImage,
+    baseUrl: config.apiUrl,
+  }),
+
+  computed: {
+    freeServices() {
+      return this.services.filter((service) => service.price == 0)
+    },
+
+    paidServices() {
+      return this.services.filter((service) => service.price > 0)
     },
   },
 }

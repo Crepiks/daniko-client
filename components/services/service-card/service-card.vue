@@ -6,6 +6,7 @@
     ></div>
     <div class="service-card__text">
       <h3 class="service-card__title">{{ name }}</h3>
+      <p class="service-card__price">{{ price > 0 ? price + ' тг' : '' }}</p>
     </div>
   </nuxt-link>
 </template>
@@ -24,6 +25,11 @@ export default {
     id: {
       type: Number,
       required: true,
+    },
+
+    price: {
+      type: Number,
+      default: 0,
     },
   },
 }
@@ -64,6 +70,12 @@ export default {
   color: $main-dark;
   font-size: 18px;
   font-weight: 500;
+}
+
+.service-card__price {
+  margin-top: 10px;
+  color: $main-dark;
+  font-size: 16px;
 }
 
 @media all and (max-width: 500px) {
