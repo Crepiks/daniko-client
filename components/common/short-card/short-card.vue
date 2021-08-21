@@ -34,7 +34,7 @@ export default {
 .short-card {
   position: relative;
   width: 100%;
-  min-height: 80px;
+  min-height: 90px;
   padding: 15px 20px;
   box-sizing: border-box;
   border-radius: 10px;
@@ -49,7 +49,6 @@ export default {
 
   &-subtitle {
     color: $main-dark;
-    margin: 5px 0 50px 0;
     font-size: 12px;
   }
 
